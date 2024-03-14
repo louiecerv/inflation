@@ -46,16 +46,17 @@ def app():
     # Create a progress bar object
     st.progress_bar = st.progress(0, text="Generating data graphs please wait...")
 
-    plot_feature(df, "usagelevel", "Usage Level", "Distribution of E-banking Usage Level")
-    plot_feature(df, "Sex", "Sex", "Distribution of Sex")
-    plot_feature(df, "Year Level", "Year Level", "Distribution of Year Level")
-    plot_feature(df, "Course", "Course", "Distribution of Course")
-    plot_feature(df, "Income", "Income", "Distribution of Family Income")
+    with st.expander("CLick to view graphs"):
+        plot_feature(df, "usagelevel", "Usage Level", "Distribution of E-banking Usage Level")
+        plot_feature(df, "Sex", "Sex", "Distribution of Sex")
+        plot_feature(df, "Year Level", "Year Level", "Distribution of Year Level")
+        plot_feature(df, "Course", "Course", "Distribution of Course")
+        plot_feature(df, "Income", "Income", "Distribution of Family Income")
 
-    countplot(df, "Sex", "Differences in E-Benking Usage According to Sex")
-    countplot(df, "Year Level", "Differences in E-Banking Usage According to Year Level")
-    countplot(df, "Course", "Differences in E-Banking Usage According to Course")
-    countplot(df, "Income", "Differences in E-Banking Usage According to Family Income")
+        countplot(df, "Sex", "Differences in E-Benking Usage According to Sex")
+        countplot(df, "Year Level", "Differences in E-Banking Usage According to Year Level")
+        countplot(df, "Course", "Differences in E-Banking Usage According to Course")
+        countplot(df, "Income", "Differences in E-Banking Usage According to Family Income")
 
     # Get column names and unique values
     columns = df.columns
