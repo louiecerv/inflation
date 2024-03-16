@@ -153,9 +153,11 @@ def mean_std(df, column_name):
     # Calculate mean and standard deviation, and display them
     mean = df[column_name].mean()
     std_dev = df[column_name].std()
+    results = df.groupby(column_name)['usagelevel'].agg(['mean', 'std'])
 
     st.write(f"Mean of {column_name}: {mean:.4f}")
     st.write(f"Standard deviation of {column_name}: {std_dev:.4f}")
+    st.write(results)
 
 
 #run the app
