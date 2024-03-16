@@ -93,7 +93,7 @@ def app():
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
     mean_std(df, "usagelevel")
-    mean_std(df, "sex")
+    mean_std(df, "Sex")
     mean_std(df, "Year Level")
     mean_std(df, "Course")
     mean_std(df, "Income")
