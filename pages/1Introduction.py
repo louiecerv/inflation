@@ -77,10 +77,11 @@ def app():
     le_list = []  # Create an empty array to store LabelEncoders
     # Loop through each column name
     for cn in column_names:
-        le = LabelEncoder()  # Create a new LabelEncoder for each column
-        le.fit(df[cn])  # Fit the encoder to the specific column
-        le_list.append(le)  # Append the encoder to the list
-        df[cn] = le.transform(df[cn])  # Transform the column using the fitted encoder
+        if cn != "Usage": 
+            le = LabelEncoder()  # Create a new LabelEncoder for each column
+            le.fit(df[cn])  # Fit the encoder to the specific column
+            le_list.append(le)  # Append the encoder to the list
+            df[cn] = le.transform(df[cn])  # Transform the column using the fitted encoder
 
     # save the label encoder to the session state
     st.session_state["le_list"] = le_list
