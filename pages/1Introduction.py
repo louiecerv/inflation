@@ -38,7 +38,7 @@ def app():
     #replace with your dataset
     df = pd.read_csv('e-banking3.csv', header=0)
     df = df.drop('Usage', axis = 1)
-    
+
     # Shuffle the DataFrame (returns a copy)
     df = df.sample(frac=1)
     st.write('Browse the dataset')
@@ -49,10 +49,15 @@ def app():
 
     with st.expander("CLick to view graphs"):
         plot_feature(df, "usagelevel", "Usage Level", "Distribution of E-banking Usage Level")
+        mean_std(df, "usagelevel")
         plot_feature(df, "Sex", "Sex", "Distribution of Sex")
+        mean_std(df, "sex")
         plot_feature(df, "Year Level", "Year Level", "Distribution of Year Level")
+        mean_std(df, "Year Level")
         plot_feature(df, "Course", "Course", "Distribution of Course")
+        mean_std(df, "Course")
         plot_feature(df, "Income", "Income", "Distribution of Family Income")
+        mean_std(df, "Income")
 
         countplot(df, "Sex", "Differences in E-Benking Usage According to Sex")
         countplot(df, "Year Level", "Differences in E-Banking Usage According to Year Level")
@@ -143,6 +148,15 @@ def countplot(df, feature, title):
     # Display the plot
     plt.tight_layout()  # Prevent overlapping elements
     st.pyplot(fig)
+
+def mean_std(df, column_name):
+    # Calculate mean and standard deviation, and display them
+    mean = df[column_name].mean()
+    std_dev = df[column_name].std()
+
+    st.write("Mean of ", column_name, " : ", mean)
+    st.write("Standard deviation of ", column_name, " : ", std_dev)
+
 
 #run the app
 if __name__ == "__main__":
