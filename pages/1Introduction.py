@@ -154,8 +154,8 @@ def mean_std(df, column_name):
     mean = df[column_name].mean()
     std_dev = df[column_name].std()
 
-    st.write("Mean of ", column_name, " : ", mean)
-    st.write("Standard deviation of ", column_name, " : ", std_dev)
+    st.write(f"Mean of {column_name}: {mean:.4f}")
+    st.write(f"Standard deviation of {column_name}: {std_dev:.4f}")
 
 
 #run the app
