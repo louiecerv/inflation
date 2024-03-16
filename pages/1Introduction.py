@@ -49,15 +49,10 @@ def app():
 
     with st.expander("CLick to view graphs"):
         plot_feature(df, "usagelevel", "Usage Level", "Distribution of E-banking Usage Level")
-        mean_std(df, "usagelevel")
         plot_feature(df, "Sex", "Sex", "Distribution of Sex")
-        mean_std(df, "sex")
         plot_feature(df, "Year Level", "Year Level", "Distribution of Year Level")
-        mean_std(df, "Year Level")
         plot_feature(df, "Course", "Course", "Distribution of Course")
-        mean_std(df, "Course")
         plot_feature(df, "Income", "Income", "Distribution of Family Income")
-        mean_std(df, "Income")
 
         countplot(df, "Sex", "Differences in E-Benking Usage According to Sex")
         countplot(df, "Year Level", "Differences in E-Banking Usage According to Year Level")
@@ -97,6 +92,11 @@ def app():
 
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
+    mean_std(df, "usagelevel")
+    mean_std(df, "sex")
+    mean_std(df, "Year Level")
+    mean_std(df, "Course")
+    mean_std(df, "Income")
 
     X = df.drop('usagelevel', axis=1)
     y = df['usagelevel']
