@@ -76,22 +76,22 @@ def app():
 
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
-    mean_std(df, "usagelevel")
+    st.write('The e-banking usage means and std when grouped according to Sex:')
     mean_std(df, "Sex")
+    st.write('The e-banking usage means and std when grouped according to Year Level:')
     mean_std(df, "Year Level")
+    st.write('The e-banking usage means and std when grouped according to Course:')
     mean_std(df, "Course")
+    st.write('The e-banking usage means and std when grouped according to Income:')
     mean_std(df, "Income")
    
 def mean_std(df, column_name):
-    # Calculate mean and standard deviation, and display them
-    mean = df[column_name].mean()
-    std_dev = df[column_name].std()
-    results = df.groupby(column_name)['usagelevel'].agg(['mean', 'std'])
+    grouped_data = df.groupby(column_name)
 
-    st.write(f"Mean of {column_name}: {mean:.4f}")
-    st.write(f"Standard deviation of {column_name}: {std_dev:.4f}")
+    # Calculate mean and standard deviation of usagelevels for each gender group
+    results = grouped_data['Usage'].agg(['mean', 'std'])
+    # Print the results
     st.write(results)
-
 
 #run the app
 if __name__ == "__main__":
