@@ -44,7 +44,11 @@ def app():
     st.write(df)
 
     st.write('Frequency counts')
-    st.write(df.describe(include='all'))
+    #st.write(df.describe(include='all'))
+
+    # Get the group frequency count of each column
+    group_freq_count = df.groupby(['usagelevel', 'Sex', 'Year Level', 'Course', 'Income']).size().unstack().fillna(0)
+
 
     with st.expander("CLick to view unique values"):
         # Get column names and unique values
