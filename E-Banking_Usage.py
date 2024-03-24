@@ -3,8 +3,7 @@ import streamlit as st
 
 # Define the Streamlit app
 def app():
-
-
+    
     text = """E-banking Usage level and Influence on Spending Habits Among College of Business and Management Students"""
     st.subheader(text)
 
