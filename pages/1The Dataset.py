@@ -76,6 +76,8 @@ def app():
 
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
+    st.write('The e-banking usage means and std when grouped according to Usage Level:')
+    mean_std(df, "usagelevel")
     st.write('The e-banking usage means and std when grouped according to Sex:')
     mean_std(df, "Sex")
     st.write('The e-banking usage means and std when grouped according to Year Level:')
