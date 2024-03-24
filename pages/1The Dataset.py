@@ -43,6 +43,9 @@ def app():
     st.write('Browse the dataset')
     st.write(df)
 
+    st.write('Frequency counts')
+    st.write(df.describe(include='all'))
+
     with st.expander("CLick to view unique values"):
         # Get column names and unique values
         columns = df.columns
