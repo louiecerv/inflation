@@ -50,9 +50,18 @@ def app():
     df["Course"] = df["Course"].astype("category")
     df["Income"] = df["Income"].astype("category")
 
-    # Get the group frequency count of each column
-    group_freq_count = df.groupby(['usagelevel', 'Sex', 'Year Level', 'Course', 'Income']).size().unstack().fillna(0)
+    # Get the frequency count of each class in the "Sex" column
+    sex_counts = df['Sex'].value_counts()
 
+    # Print the frequency table
+    print(sex_counts)
+
+    # Create a bar chart of the frequency using seaborn
+    sns.barplot(x=sex_counts.index, y=sex_counts.values)
+    plt.xlabel("Sex")
+    plt.ylabel("Frequency")
+    plt.title("Frequency of Sex in the DataFrame")
+    st.pyplot(fig)
 
     with st.expander("CLick to view unique values"):
         # Get column names and unique values
