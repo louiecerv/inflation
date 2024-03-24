@@ -54,7 +54,7 @@ def app():
     sex_counts = df['Sex'].value_counts()
 
     # Print the frequency table
-    print(sex_counts)
+    st.write(sex_counts)
     # Create the figure and axes objects
     fig, ax = plt.subplots()  # Create a figure and a single axes
     # Create a bar chart of the frequency using seaborn
