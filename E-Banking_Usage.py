@@ -42,22 +42,14 @@ def app():
 
     if "selected_model" not in st.session_state: 
         st.session_state["selected_model"] = 0
-    
-    text = """Louie F. Cervantes, M. Eng. (Information Engineering) \n\n
-    CCS 229 - Intelligent Systems
-    Computer Science Department
-    College of Information and Communications Technology
-    West Visayas State University"""
-    st.text(text)
 
     st.image('e-banking.jpg', caption="The E-banking Usage")
-    text = """Dataset for E-Banking Usage and Spending Habits of CBM Students at WVSU is used 
-    with permission from an undergraduate thesis paper:"""
+    text = """An udergraduate thesis at the College of Business and Management:"""
     st.write(text)  
     st.markdown("Baldevarona, A. M. G., Banggud, R. B., Gronifillo, G. C., Honrado, S. R. B., & Jamelarin,  R. J. E. L. *E-banking Usage Level and Influences on Spending Habits Among College of Business and Management students.* Unpublished undergraduate thesis. (2024)")
 
-    text = """\nThis dataset investigates the factors that affect the e-banking usage and 
-    spending habits among College of Business Management (CBM) students at 
+    text = """\nThis dataset investigated the factors that affect the e-banking usage and 
+    the influences in the spending habits among College of Business Management (CBM) students at 
     West Visayas State University (WVSU).
     Features:
     family_income (categorical): This feature represents the student's family 
