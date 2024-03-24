@@ -18,7 +18,7 @@ def app():
     if "le_list" not in st.session_state:
         st.session_state.le_list = []
 
-    st.subheader('The task: Classify E-banking usage as very low, low, moderate, high or very high.')
+    st.subheader('Introduction')
     text = """CBM Student E-Banking Usage Dataset
     \nThis dataset investigates the factors that affect e-banking usage and spending habits 
     among students at CBM.
@@ -39,7 +39,7 @@ def app():
     df = pd.read_csv('e-banking3.csv', header=0)
     df = df.drop('Usage', axis = 1)
 
-    # Shuffle the DataFrame (returns a copy)
+    # Shuffle the DataFrame
     df = df.sample(frac=1)
     st.write('Browse the dataset')
     st.write(df)
