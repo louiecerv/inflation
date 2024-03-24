@@ -55,7 +55,8 @@ def app():
 
     # Print the frequency table
     print(sex_counts)
-
+    # Create the figure and axes objects
+    fig, ax = plt.subplots()  # Create a figure and a single axes
     # Create a bar chart of the frequency using seaborn
     sns.barplot(x=sex_counts.index, y=sex_counts.values)
     plt.xlabel("Sex")
