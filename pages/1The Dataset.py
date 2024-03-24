@@ -45,6 +45,7 @@ def app():
 
     st.write('Frequency counts')
     #st.write(df.describe(include='all'))
+    df["Sex"] = df["Sex"].astype("category")
 
     # Get the group frequency count of each column
     group_freq_count = df.groupby(['usagelevel', 'Sex', 'Year Level', 'Course', 'Income']).size().unstack().fillna(0)
