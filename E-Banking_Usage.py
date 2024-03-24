@@ -3,13 +3,13 @@ import streamlit as st
 
 # Define the Streamlit app
 def app():
-    
+
     text = """E-banking Usage level and Influence on Spending Habits Among College of Business and Management Students"""
     st.subheader(text)
 
     text = """An udergraduate thesis at the College of Business and Management:"""
     st.write(text)  
-    st.markdown("Baldevarona, A. M. G., Banggud, R. B., Gronifillo, G. C., Honrado, S. R. B., & Jamelarin,  R. J. E. L. *E-banking Usage Level and Influences on Spending Habits Among College of Business and Management students.* Unpublished undergraduate thesis. (2024)")
+    st.markdown("Baldevarona, Alyssa Mae G., Banggud, Rica B., Gronifillo, Gracielle C., Honrado, Sherry Rose B., & Jamelarin,  Robert John Enray L. *E-banking Usage Level and Influences on Spending Habits Among College of Business and Management students.* Unpublished undergraduate thesis. (2024)")
 
     st.image('e-banking.jpg', caption="The E-banking Usage")
 
