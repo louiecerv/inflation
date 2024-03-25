@@ -136,9 +136,15 @@ def app():
     association that the sample size or test wasn't powerful enough to detect, or 
     there might not be a connection at all"""
     st.write(text)
-    
+
     st.subheader('Chi-square Test of Course and Usage Level')
     chi_square(df, "Course")
+    text = """The chi-square test result with a p-value of 0.13 (greater than a common significance
+    level of 0.05) indicates that we fail to reject the null hypothesis. In other words, 
+    there is not enough evidence to conclude that there's a statistically significant 
+    association between course and usage level."""
+    st.write(text)
+    
     st.subheader('Chi-square Test of Year Level and Usage Level')
     chi_square(df, "Year Level")
     st.subheader('Chi-square Test of Income and Usage Level')
