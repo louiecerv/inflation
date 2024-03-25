@@ -158,7 +158,7 @@ def app():
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3, g4)
     # Print the results
-    st.subheader('ANOVA Test of Year Level and Spwnsing Habit Influence')
+    st.subheader('ANOVA Test of Year Level and Spending Habit Influence')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
     text = """Insert Interpretation"""
