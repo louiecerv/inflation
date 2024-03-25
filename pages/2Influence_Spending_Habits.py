@@ -179,7 +179,16 @@ def app():
     st.subheader('ANOVA Test of Sex and Spending Habit Influence')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-    text = """Insert Interpretation"""
+    text = """The F-statistic of 1.33 is relatively low. In ANOVA, a higher F-statistic 
+    indicates a stronger likelihood that the groups (in this case, sex categories) 
+    have different means. p-value: The p-value of 0.2492 is greater than the 
+    commonly used significance level of 0.05. This means we fail to reject 
+    the null hypothesis, which states that there is no significant difference 
+    in spending habits between sexes. Based on the ANOVA test results, there is not 
+    enough evidence to conclude that sex has a statistically significant influence 
+    on spending habits. In other words, the observed difference in spending habits 
+    between males and females in the study is likely due to chance and not
+    because of their sex."""
     st.write(text)
 
     g1 = df1.loc[(df1['Year Level'] =='First Year'), 'Influence']
