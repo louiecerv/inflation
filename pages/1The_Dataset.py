@@ -172,7 +172,19 @@ def app():
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
 
-    
+    g1 = df1.loc[(df1['Course'] =='BSTM'), 'Usage']
+    g2 = df1.loc[(df1['Course'] =='BSCM'), 'Usage']
+    g3 = df1.loc[(df1['Course'] =='BSBA'), 'Usage']
+    g4 = df1.loc[(df1['Course'] =='BSHM'), 'Usage']
+
+    # Perform one-way ANOVA test
+    F_statistic, p_value = stats.f_oneway(g1, g2, g3, g4)
+    # Print the results
+    st.subheader('ANOVA Test of Course and E-Banking Usage')
+    st.write("F-statistic: {:.2f}".format(F_statistic))
+    st.write("p-value: {:.4f}".format(p_value))
+
+
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
 
