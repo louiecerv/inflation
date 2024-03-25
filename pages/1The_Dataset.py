@@ -151,7 +151,6 @@ def app():
     effect on e-banking usage."""
     st.write(text)
 
-    st.write('One-way ANOVA Test on Sex and E-Banking Usage')
     g1 = df1.loc[(df1['Sex'] =='Male'), 'Usage']
     g2 = df1.loc[(df1['Sex'] =='Female'), 'Usage']
     # Perform one-way ANOVA test
@@ -161,12 +160,10 @@ def app():
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
 
-    st.write('One-way ANOVA Test on Year Level and E-Banking Usage')
     g1 = df1.loc[(df1['Year Level'] =='First Year'), 'Usage']
     g2 = df1.loc[(df1['Year Level'] =='Second Year'), 'Usage']
     g3 = df1.loc[(df1['Year Level'] =='Third Year'), 'Usage']
     g4 = df1.loc[(df1['Year Level'] =='Fourth Year'), 'Usage']
-
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3, g4)
     # Print the results
@@ -174,7 +171,7 @@ def app():
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
 
-    st.write('One-way ANOVA Test on Course and E-Banking Usage')
+
     g1 = df1.loc[(df1['Course'] =='BSTM'), 'Usage']
     g2 = df1.loc[(df1['Course'] =='BSCM'), 'Usage']
     g3 = df1.loc[(df1['Course'] =='BSBA'), 'Usage']
@@ -194,7 +191,7 @@ def app():
 
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3)
-
+    st.subheader('ANOVA Test of Incone and E-Banking Usage')
     # Print the results
     print("F-statistic: {:.2f}".format(F_statistic))
     print("p-value: {:.4f}".format(p_value))
