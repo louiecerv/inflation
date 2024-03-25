@@ -201,7 +201,10 @@ def app():
     st.subheader('ANOVA Test of Year Level and Spending Habit Influence')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-    text = """Insert Interpretation"""
+    text = """The results of the ANOVA test you provided indicate that there is not 
+    enough evidence to reject the null hypothesis. In other words, at a significance 
+    level of 0.05, we cannot say that there is a statistically significant difference 
+    in spending habits between different year levels."""
     st.write(text)
 
     g1 = df1.loc[(df1['Course'] =='BSTM'), 'Influence']
