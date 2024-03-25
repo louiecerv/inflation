@@ -194,7 +194,17 @@ def app():
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-    text = """Interpret the result"""
+    text = """F-statistic: 5.26 - This value indicates the ratio of the variance between 
+    income brackets to the variance within income brackets. A higher F-statistic suggests 
+    a greater difference in usage levels between the income brackets.
+    \np-value: 0.0057 - This value represents the probability of observing an F-statistic
+     this extreme, assuming there's no actual difference between the income brackets 
+     (null hypothesis). A small p-value (typically less than 0.05) rejects the null hypothesis.
+     In this case, with an F-statistic of 5.26 and a p-value of 0.0057, we can reject the null
+     hypothesis. This means there's a statistically significant difference in usage level 
+     between the income brackets. The F-statistic itself doesn't tell you the direction of 
+     the difference (i.e., which income bracket uses more), but it suggests that income 
+     brackets play a role in usage levels."""
     st.write(text)
 
 def mean_std(df, column_name):
