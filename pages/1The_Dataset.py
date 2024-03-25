@@ -138,8 +138,8 @@ def app():
     F_statistic, p_value = stats.f_oneway(g1, g2)
 
     # Print the results
-    print("F-statistic: {:.2f}".format(F_statistic))
-    print("p-value: {:.4f}".format(p_value))
+    st.write("F-statistic: {:.2f}".format(F_statistic))
+    st.write("p-value: {:.4f}".format(p_value))
     
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
