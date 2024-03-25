@@ -131,15 +131,47 @@ def app():
 
     st.subheader('ANOVA Test')
 
+    text = """ANOVA, or Analysis of Variance, is a statistical technique used to compare the 
+    means of two or more groups. It does this by breaking down the total variance in the 
+    data into two components:
+    \nVariance between groups: This represents the differences between the average 
+    values of the groups.
+    \nVariance within groups: This represents the variation around the mean within each group.
+    ANOVA then calculates a statistic called the F-statistic. This statistic compares the variance
+    between groups to the variance within groups. If the F-statistic is large, it suggests that 
+    the differences between the group means are statistically significant. In other words, 
+    it's likely that there's a true difference between the groups, not just random chance.
+    \nIn essence, ANOVA helps you assess whether observed differences in group means are 
+    meaningful or not.
+    \nThe F-statistic measures the difference between the means of the groups relative to the 
+    variability within the groups.
+    \nThe p-value indicates the probability of observing such a difference by chance, assuming no 
+    real effect of sex on usage.
+    \nA statistically significant result (p-value < 0.05) suggests that the variable has a significant 
+    effect on e-banking usage."""
+    st.write(text)
+
     g1 = df1.loc[(df1['Sex'] =='Male'), 'Usage']
     g2 = df1.loc[(df1['Sex'] =='Female'), 'Usage']
-
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2)
-
     # Print the results
+    st.subheader('ANOVA Test of Sex and E-Banking Usage')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
+
+    g1 = df1.loc[(df1['Year Level'] =='First Year'), 'Usage']
+    g2 = df1.loc[(df1['Year Level'] =='Second Year'), 'Usage']
+    g3 = df1.loc[(df1['Year Level'] =='Third Year'), 'Usage']
+    g4 = df1.loc[(df1['Year Level'] =='Fourth Year'), 'Usage']
+
+    # Perform one-way ANOVA test
+    F_statistic, p_value = stats.f_oneway(g1, g2, g3, g4)
+    # Print the results
+    st.subheader('ANOVA Test of Year Level and E-Banking Usage')
+    st.write("F-statistic: {:.2f}".format(F_statistic))
+    st.write("p-value: {:.4f}".format(p_value))
+
     
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
