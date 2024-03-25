@@ -184,7 +184,7 @@ def app():
 
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3)
-    st.subheader('ANOVA Test of Income and Speinding Habit Influence')
+    st.subheader('ANOVA Test of Income and Spending Habit Influence')
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
