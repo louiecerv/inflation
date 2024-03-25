@@ -45,6 +45,8 @@ def app():
     st.write('Browse the dataset')
     st.write(df)
 
+    df1 = df.copy()
+
     st.subheader('Frequency counts')
 
     display_freqs(df, "Sex")
@@ -127,7 +129,17 @@ def app():
     st.subheader('Chi-square Test of Income and Usage Level')
     chi_square(df, "Income")
 
+    st.subheader('ANOVA Test')
 
+    g1 = df1.loc[(df1['Sex'] =='Male'), 'Usage']
+    g2 = df1.loc[(df1['Sex'] =='Female'), 'Usage']
+
+    # Perform one-way ANOVA test
+    F_statistic, p_value = stats.f_oneway(g1, g2)
+
+    # Print the results
+    print("F-statistic: {:.2f}".format(F_statistic))
+    print("p-value: {:.4f}".format(p_value))
     
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
@@ -179,6 +191,7 @@ def chi_square(df, column):
     st.write("p-value: ", f"{p_value:.2f}")
     st.write("Degrees of freedom: ", dof)
     st.write("Expected frequencies: \n", expected)
+
 
 #run the app
 if __name__ == "__main__":
