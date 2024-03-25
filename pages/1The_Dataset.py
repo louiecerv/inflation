@@ -144,12 +144,34 @@ def app():
     there is not enough evidence to conclude that there's a statistically significant 
     association between course and usage level."""
     st.write(text)
-    
+
     st.subheader('Chi-square Test of Year Level and Usage Level')
     chi_square(df, "Year Level")
+    text = """Based on the chi-square test statistic and p-value, there is not enough evidence
+    to reject the null hypothesis.  In other words, the data does not show a statistically 
+    significant association between year level and usage level.
+    Therefore, we cannot conclude that there's a relationship between year level and usage 
+    level in this dataset.  It's possible that year level does influence usage level, 
+    but this particular study didn't find enough evidence to support that claim."""
+    st.write(text)
+
     st.subheader('Chi-square Test of Income and Usage Level')
     chi_square(df, "Income")
-
+    text = """Based on the chi-square test result, there is no statistically significant 
+    association between family income and usage level. 
+    Chi-square statistic (11.27): This statistic doesn't tell us much by itself, 
+    but it's used in calculating the p-value.Degrees of freedom (8): This indicates the 
+    number of independent categories used in the analysis (3 for income and 3 for usage level).
+    p-value (0.19): This is the most important result. Since it's greater than 0.05 
+    (common significance level), we fail to reject the null hypothesis. 
+    In other words, the observed difference in usage level across income groups is 
+    likely due to chance, and there's not enough evidence to conclude a 
+    genuine relationship.  In simpler terms, while there might be some differences in usage 
+    level between different income groups, these differences are probably not 
+    significant. It's possible that usage level is more influenced by factors 
+    other than family income."""
+    st.write(text)
+    
     st.subheader('ANOVA Test')
 
     text = """ANOVA, or Analysis of Variance, is a statistical technique used to compare the 
