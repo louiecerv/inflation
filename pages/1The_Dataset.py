@@ -56,7 +56,7 @@ def app():
     fig, ax = plt.subplots()
 
     # Create the countplot using the axes object
-    p = sns.countplot(x="Usage", hue = "Usage", data=df, palette="Set1", ax=ax)
+    p = sns.countplot(x="Usage", hue = "Usage", data=df, palette="Set1", ax=ax, legend=False)
 
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)
