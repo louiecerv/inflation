@@ -142,7 +142,7 @@ def plot_usage_by(df, column):
     plt.tight_layout()  # Prevent overlapping elements
 
     # Display the plot
-    plt.show()
+    st.pyplot(fig)
 
 #run the app
 if __name__ == "__main__":
