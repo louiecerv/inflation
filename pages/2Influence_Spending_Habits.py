@@ -140,7 +140,18 @@ def app():
 
     st.subheader('Chi-square Test of Year Level and Spending Influence Level')
     chi_square(df, "Year Level")
-    text = """insert interpretation """
+    text = """Based on the chi-square test results, there's evidence of a relationship between 
+    spending habit influence level and year level. Chi-square statistic (23.94): This value indicates 
+    the strength of the observed difference between the spending habit influence level 
+    distribution across different year levels and what would be expected by chance if no 
+    relationship existed. A higher value suggests a stronger difference. p-value (0.02): 
+    This is the probability of observing a chi-square statistic this extreme (or more extreme) 
+    assuming there's actually no relationship between the variables. A low p-value (typically 
+    below 0.05) suggests we can reject the idea that the observed difference is due to chance 
+    alone. In this case, 0.02 is less than the common significance level of 0.05, so it's 
+    a statistically significant result.  The chi-square test statistically supports the conclusion 
+    that spending habit influence level is not independent of year level. There's a 
+    significant association between the two."""
     st.write(text)
 
     st.subheader('Chi-square Test of Income and Spending Influence Level')
