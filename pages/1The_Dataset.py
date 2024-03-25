@@ -184,14 +184,13 @@ def app():
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
 
-    st.write('One-way ANOVA Test on Income and E-Banking Usage')
     g1 = df1.loc[(df1['Income'] =='Php 20 000 and Below'), 'Usage']
     g2 = df1.loc[(df1['Income'] =='Php 20 001 to Php 60 000'), 'Usage']
     g3 = df1.loc[(df1['Income'] =='Above Php 60 000'), 'Usage']
 
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3)
-    st.subheader('ANOVA Test of Incone and E-Banking Usage')
+    st.subheader('ANOVA Test of Income and E-Banking Usage')
     # Print the results
     print("F-statistic: {:.2f}".format(F_statistic))
     print("p-value: {:.4f}".format(p_value))
