@@ -122,6 +122,21 @@ def app():
     st.write(text)
     st.subheader('Chi-square Test of Sex and Usage Level')
     chi_square(df, "Sex")
+    text = """Based on the chi-square test results, there is not enough evidence to conclude 
+    that there's a statistically significant association between sex and usage level. 
+    Chi-square statistic (4.10): This statistic doesn't provide direct evidence for or 
+    against an association. It's used in the calculation of the p-value. Degrees of freedom (4): 
+    This indicates the number of independent categories used in the analysis.
+    p-value (0.39): This is the probability of observing a chi-square statistic this extreme 
+    or more extreme, assuming there's no real association between sex and usage level 
+    (null hypothesis). A high p-value (greater than 0.05, in this case) suggests we 
+    fail to reject the null hypothesis. In other words, the observed difference in usage 
+    level by sex could be due to chance. Therefore, we can't claim that sex has a statistically 
+    significant influence on usage level based on this test. It's possible that there's a weak 
+    association that the sample size or test wasn't powerful enough to detect, or 
+    there might not be a connection at all"""
+    st.write(text)
+    
     st.subheader('Chi-square Test of Course and Usage Level')
     chi_square(df, "Course")
     st.subheader('Chi-square Test of Year Level and Usage Level')
@@ -165,7 +180,7 @@ def app():
     cannot conclude that the average usage level differs between the two sexes 
     based on this data."""
     st.write(text)
-    
+
     g1 = df1.loc[(df1['Year Level'] =='First Year'), 'Usage']
     g2 = df1.loc[(df1['Year Level'] =='Second Year'), 'Usage']
     g3 = df1.loc[(df1['Year Level'] =='Third Year'), 'Usage']
