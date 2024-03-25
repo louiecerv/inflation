@@ -117,7 +117,15 @@ def app():
     st.write(text)
     st.subheader('Chi-square Test of Sex and Spending Influence Level')
     chi_square(df, "Sex")
-    text = """insert interpretation """
+    text = """Based on the chi-square test results, there is no statistically significant 
+    association between sex (male/female) and spending habits influence level.
+    The chi-square statistic (2.41) is relatively low, indicating weak evidence for a relationship.
+    The p-value (0.66) is much greater than the typical significance level (0.05). 
+    A p-value this high suggests we cannot reject the null hypothesis, which states that
+    there's no association between sex and spending habits influence. Degrees of freedom (4) refer to 
+    the number of comparisons made after considering sample size. In simpler terms, the data 
+    doesn't provide enough evidence to conclude that men and women are influenced differently 
+    when it comes to spending habits."""
     st.write(text)
 
     st.subheader('Chi-square Test of Course and Spending Influence Level')
