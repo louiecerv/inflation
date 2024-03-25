@@ -175,8 +175,8 @@ def chi_square(df, column):
     # perform a chi-square test
     chi2_stat, p_value, dof, expected = chi2_contingency(cont_table)
     # print the results
-    st.write("Chi-square statistic: ", chi2_stat)
-    st.write("p-value: ", p_value)
+    st.write("Chi-square statistic: ", f"{chi2_stat:.2f}")
+    st.write("p-value: ", f"{p_value:.2f}")
     st.write("Degrees of freedom: ", dof)
     st.write("Expected frequencies: \n", expected)
 
