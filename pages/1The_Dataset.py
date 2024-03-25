@@ -10,6 +10,8 @@ from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
+from scipy.stats import chi2_contingency
+import scipy.stats as stats
 import time
 
 # Define the Streamlit app
@@ -108,7 +110,18 @@ def app():
     st.write('The e-banking usage means and std when grouped according to Income:')
     plot_usage_by(df, "Income")
     mean_std(df, "Income")
-   
+
+    st.subheader('Inferential Statistics')
+    text = """Chi-square test: This is a statistical method used to determine if there is 
+    a significant association between two categorical variables. For example, if we want 
+    to know if there is a significant association between sex and levels of usage of 
+    online payment, you can use a chi-square test to determine if there is a significant
+    difference in the distribution of responses between males and females."""
+    st.write(text)
+
+    chi_square("Sex")
+
+    
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
 
@@ -146,6 +159,19 @@ def plot_usage_by(df, column):
 
     # Display the plot
     st.pyplot(fig)
+
+def chi_square(df, column):
+# Generate a contingency table
+    cont_table = pd.crosstab(df['Sex'], df['usagelevel'])
+    # Display the contingency table
+    st.write(cont_table)    
+    # perform a chi-square test
+    chi2_stat, p_value, dof, expected = chi2_contingency(cont_table)
+    # print the results
+    st.write("Chi-square statistic: ", chi2_stat)
+    st.write("p-value: ", p_value)
+    st.write("Degrees of freedom: ", dof)
+    st.write("Expected frequencies: \n", expected)
 
 #run the app
 if __name__ == "__main__":
