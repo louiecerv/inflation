@@ -44,11 +44,6 @@ def app():
     st.write(df)
 
     st.subheader('Frequency counts')
-    #st.write(df.describe(include='all'))
-    df["Sex"] = df["Sex"].astype("category")
-    df["Year Level"] = df["Year Level"].astype("category")
-    df["Course"] = df["Course"].astype("category")
-    df["Income"] = df["Income"].astype("category")
 
     # Create a frequency table of the gender classes
     gender_counts = df['Sex'].value_counts()
