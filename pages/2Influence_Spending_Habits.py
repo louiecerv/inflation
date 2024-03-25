@@ -130,7 +130,12 @@ def app():
 
     st.subheader('Chi-square Test of Course and Spending Influence Level')
     chi_square(df, "Course")
-    text = """insert interpretation """
+    text = """Based on the chi-square test statistic of 23.79 and a p-value of 0.02, we can reject 
+    the null hypothesis. This means that there is a statistically significant difference in 
+    spending habits level grouped by course. In other words, the spending habits level is not 
+    independent of the course taken. There's a connection between the two. For instance, 
+    students enrolled in a particular course might tend to spend more on certain things 
+    compared to students in other courses"""
     st.write(text)
 
     st.subheader('Chi-square Test of Year Level and Spending Influence Level')
