@@ -100,10 +100,13 @@ def app():
     plot_usage_by(df, "Sex")
     mean_std(df, "Sex")
     st.write('The e-banking usage means and std when grouped according to Year Level:')
+    plot_usage_by(df, "Year Level")
     mean_std(df, "Year Level")
     st.write('The e-banking usage means and std when grouped according to Course:')
+    plot_usage_by(df, "Course")
     mean_std(df, "Course")
     st.write('The e-banking usage means and std when grouped according to Income:')
+    plot_usage_by(df, "Income")
     mean_std(df, "Income")
    
 def mean_std(df, column_name):
