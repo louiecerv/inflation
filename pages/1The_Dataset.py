@@ -118,8 +118,15 @@ def app():
     online payment, you can use a chi-square test to determine if there is a significant
     difference in the distribution of responses between males and females."""
     st.write(text)
-
+    st.subheader('Chi-square Test of Sex and Usage Level')
     chi_square(df, "Sex")
+    st.subheader('Chi-square Test of Course and Usage Level')
+    chi_square(df, "Course")
+    st.subheader('Chi-square Test of Year Level and Usage Level')
+    chi_square(df, "Year Level")
+    st.subheader('Chi-square Test of Income and Usage Level')
+    chi_square(df, "Income")
+
 
     
 def mean_std(df, column_name):
