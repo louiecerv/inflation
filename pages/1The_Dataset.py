@@ -170,7 +170,11 @@ def app():
     st.subheader('ANOVA Test of Year Level and E-Banking Usage')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-
+    text = """An F-statistic of 0.60 and a p-value of 0.6132 suggests that there is no statistically 
+    significant difference in usage level between year levels.  Since both the F-statistic and p-value 
+    point in the same direction, we can confidently conclude that there's not enough evidence 
+    to say that usage level differs statistically between year levels in this study."""
+    st.write(text)
 
     g1 = df1.loc[(df1['Course'] =='BSTM'), 'Usage']
     g2 = df1.loc[(df1['Course'] =='BSCM'), 'Usage']
@@ -183,6 +187,12 @@ def app():
     st.subheader('ANOVA Test of Course and E-Banking Usage')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
+    text = """Based on the F-statistic of 3.43 and a p-value of 0.0176, we can reject the null 
+    hypothesis. This means there is a statistically significant difference in usage level 
+    between courses.  In simpler terms, the results suggest that the average usage level 
+    is not the same across different courses. There's evidence to conclude that some 
+    courses have higher or lower usage levels compared to others."""
+    st.write(text)
 
     g1 = df1.loc[(df1['Income'] =='Php 20 000 and Below'), 'Usage']
     g2 = df1.loc[(df1['Income'] =='Php 20 001 to Php 60 000'), 'Usage']
