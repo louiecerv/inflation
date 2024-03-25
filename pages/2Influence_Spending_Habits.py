@@ -140,76 +140,55 @@ def app():
     text = """insert interpretation """
     st.write(text)
 
-    g1 = df1.loc[(df1['Sex'] =='Male'), 'Usage']
-    g2 = df1.loc[(df1['Sex'] =='Female'), 'Usage']
+    g1 = df1.loc[(df1['Sex'] =='Male'), 'Influence']
+    g2 = df1.loc[(df1['Sex'] =='Female'), 'Influence']
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2)
     # Print the results
-    st.subheader('ANOVA Test of Sex and E-Banking Usage')
+    st.subheader('ANOVA Test of Sex and Spending Habit Influence')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-    text = """The F-statistic of 1.72 and p-value of 0.1912 in
-    the ANOVA test suggests there is not statistically significant evidence to reject 
-    the null hypothesis. In other words, at a significance level of 0.05, we 
-    cannot conclude that the average usage level differs between the two sexes 
-    based on this data."""
+    text = """Insert Interpretation"""
     st.write(text)
 
-    g1 = df1.loc[(df1['Year Level'] =='First Year'), 'Usage']
-    g2 = df1.loc[(df1['Year Level'] =='Second Year'), 'Usage']
-    g3 = df1.loc[(df1['Year Level'] =='Third Year'), 'Usage']
-    g4 = df1.loc[(df1['Year Level'] =='Fourth Year'), 'Usage']
+    g1 = df1.loc[(df1['Year Level'] =='First Year'), 'Influence']
+    g2 = df1.loc[(df1['Year Level'] =='Second Year'), 'Influence']
+    g3 = df1.loc[(df1['Year Level'] =='Third Year'), 'Influence']
+    g4 = df1.loc[(df1['Year Level'] =='Fourth Year'), 'Influence']
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3, g4)
     # Print the results
-    st.subheader('ANOVA Test of Year Level and E-Banking Usage')
+    st.subheader('ANOVA Test of Year Level and Spwnsing Habit Influence')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-    text = """An F-statistic of 0.60 and a p-value of 0.6132 suggests that there is no statistically 
-    significant difference in usage level between year levels.  Since both the F-statistic and p-value 
-    point in the same direction, we can confidently conclude that there's not enough evidence 
-    to say that usage level differs statistically between year levels in this study."""
+    text = """Insert Interpretation"""
     st.write(text)
 
-    g1 = df1.loc[(df1['Course'] =='BSTM'), 'Usage']
-    g2 = df1.loc[(df1['Course'] =='BSCM'), 'Usage']
-    g3 = df1.loc[(df1['Course'] =='BSBA'), 'Usage']
-    g4 = df1.loc[(df1['Course'] =='BSHM'), 'Usage']
+    g1 = df1.loc[(df1['Course'] =='BSTM'), 'Influence']
+    g2 = df1.loc[(df1['Course'] =='BSCM'), 'Influence']
+    g3 = df1.loc[(df1['Course'] =='BSBA'), 'Infleunce']
+    g4 = df1.loc[(df1['Course'] =='BSHM'), 'Influence']
 
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3, g4)
     # Print the results
-    st.subheader('ANOVA Test of Course and E-Banking Usage')
+    st.subheader('ANOVA Test of Course and Spending Habit Influence')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-    text = """Based on the F-statistic of 3.43 and a p-value of 0.0176, we can reject the null 
-    hypothesis. This means there is a statistically significant difference in usage level 
-    between courses.  In simpler terms, the results suggest that the average usage level 
-    is not the same across different courses. There's evidence to conclude that some 
-    courses have higher or lower usage levels compared to others."""
+    text = """Insert Interpretation"""
     st.write(text)
 
-    g1 = df1.loc[(df1['Income'] =='Php 20 000 and Below'), 'Usage']
-    g2 = df1.loc[(df1['Income'] =='Php 20 001 to Php 60 000'), 'Usage']
-    g3 = df1.loc[(df1['Income'] =='Above Php 60 000'), 'Usage']
+    g1 = df1.loc[(df1['Income'] =='Php 20 000 and Below'), 'Influence']
+    g2 = df1.loc[(df1['Income'] =='Php 20 001 to Php 60 000'), 'Influence']
+    g3 = df1.loc[(df1['Income'] =='Above Php 60 000'), 'Influence']
 
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3)
-    st.subheader('ANOVA Test of Income and E-Banking Usage')
+    st.subheader('ANOVA Test of Income and Speinding Habit Influence')
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-    text = """F-statistic: 5.26 - This value indicates the ratio of the variance between 
-    income brackets to the variance within income brackets. A higher F-statistic suggests 
-    a greater difference in usage levels between the income brackets.
-    \np-value: 0.0057 - This value represents the probability of observing an F-statistic
-     this extreme, assuming there's no actual difference between the income brackets 
-     (null hypothesis). A small p-value (typically less than 0.05) rejects the null hypothesis.
-     In this case, with an F-statistic of 5.26 and a p-value of 0.0057, we can reject the null
-     hypothesis. This means there's a statistically significant difference in usage level 
-     between the income brackets. The F-statistic itself doesn't tell you the direction of 
-     the difference (i.e., which income bracket uses more), but it suggests that income 
-     brackets play a role in usage levels."""
+    text = """Insert Interpretation"""
     st.write(text)
 
 def mean_std(df, column_name):
