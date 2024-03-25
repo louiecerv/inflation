@@ -54,7 +54,7 @@ def app():
     gender_counts = df['Sex'].value_counts()
 
     # Print the frequency table
-    print(gender_counts)
+    st.write(gender_counts)
 
     display_freqs(df, "Sex")
     display_freqs(df, "Year Level")
