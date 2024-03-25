@@ -218,7 +218,13 @@ def app():
     st.subheader('ANOVA Test of Course and Spending Habit Influence')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-    text = """Insert Interpretation"""
+    text = """The results of the ANOVA test indicate a statistically significant difference 
+    (p-value = 0.0203) between spending habits influenced by course. In other words, at 
+    a 5% significance level, we can reject the null hypothesis that there is no difference 
+    in spending habits between courses. This suggests that the course a student takes has an 
+    impact on their spending habits. A p-value less than 0.05 indicates statistically 
+    significant results. In this case, 0.0203 is less than 0.05, so we can reject 
+    the null hypothesis."""
     st.write(text)
 
     g1 = df1.loc[(df1['Income'] =='Php 20 000 and Below'), 'Influence']
