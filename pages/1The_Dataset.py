@@ -159,7 +159,13 @@ def app():
     st.subheader('ANOVA Test of Sex and E-Banking Usage')
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-
+    text = """The F-statistic of 1.72 and p-value of 0.1912 in
+    the ANOVA test suggests there is not statistically significant evidence to reject 
+    the null hypothesis. In other words, at a significance level of 0.05, we 
+    cannot conclude that the average usage level differs between the two sexes 
+    based on this data."""
+    st.write(text)
+    
     g1 = df1.loc[(df1['Year Level'] =='First Year'), 'Usage']
     g2 = df1.loc[(df1['Year Level'] =='Second Year'), 'Usage']
     g3 = df1.loc[(df1['Year Level'] =='Third Year'), 'Usage']
