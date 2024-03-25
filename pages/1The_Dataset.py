@@ -45,12 +45,6 @@ def app():
 
     st.subheader('Frequency counts')
 
-    # Create a frequency table of the gender classes
-    gender_counts = df['Sex'].value_counts()
-
-    # Print the frequency table
-    st.write(gender_counts)
-
     display_freqs(df, "Sex")
     display_freqs(df, "Year Level")
     display_freqs(df, "Course")
