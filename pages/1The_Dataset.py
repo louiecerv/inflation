@@ -97,6 +97,7 @@ def app():
     st.write('The e-banking usage means and std when grouped according to Usage Level:')
     mean_std(df, "usagelevel")
     st.write('The e-banking usage means and std when grouped according to Sex:')
+    plot_usage_by(df, "Sex")
     mean_std(df, "Sex")
     st.write('The e-banking usage means and std when grouped according to Year Level:')
     mean_std(df, "Year Level")
@@ -128,6 +129,20 @@ def display_freqs(df, column):
     plt.ylabel("Frequency")
     plt.title('Frequency of ' + column)
     st.pyplot(fig)
+
+def plot_usage_by(df, column):
+    # Create the figure and axes object
+    fig, ax = plt.subplots(figsize=(6, 3))
+
+    # Create the countplot directly on the provided axes
+    sns.countplot(x=column, data=df, hue='usagelevel', palette='bright', ax=ax)
+
+    # Set the title and adjust layout
+    ax.set_title("Usage Levels Grouped by " + column, fontsize=14)
+    plt.tight_layout()  # Prevent overlapping elements
+
+    # Display the plot
+    plt.show()
 
 #run the app
 if __name__ == "__main__":
