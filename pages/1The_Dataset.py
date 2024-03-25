@@ -50,6 +50,12 @@ def app():
     df["Course"] = df["Course"].astype("category")
     df["Income"] = df["Income"].astype("category")
 
+    # Create a frequency table of the gender classes
+    gender_counts = df['Sex'].value_counts()
+
+    # Print the frequency table
+    print(gender_counts)
+
     display_freqs(df, "Sex")
     display_freqs(df, "Year Level")
     display_freqs(df, "Course")
@@ -108,7 +114,7 @@ def mean_std(df, column_name):
     st.write(results)
 
 def display_freqs(df, column):
-    # Get the frequency count of each class in the "Sex" column
+    # Get the frequency count of each class in the column
     col_counts = df[column].value_counts()
 
     # Print the frequency table
