@@ -51,6 +51,9 @@ def app():
     df["Income"] = df["Income"].astype("category")
 
     display_freqs(df, "Sex")
+    display_freqs(df, "Year Level")
+    display_freqs(df, "Course")
+    display_freqs(df, "Income")
 
     with st.expander("CLick to view unique values"):
         # Get column names and unique values
@@ -99,7 +102,7 @@ def app():
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
 
-    # Calculate mean and standard deviation of usagelevels for each gender group
+    # Calculate mean and standard deviation of usage for each group
     results = grouped_data['Usage'].agg(['mean', 'std'])
     # Print the results
     st.write(results)
