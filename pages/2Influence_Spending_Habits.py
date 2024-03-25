@@ -166,7 +166,7 @@ def app():
 
     g1 = df1.loc[(df1['Course'] =='BSTM'), 'Influence']
     g2 = df1.loc[(df1['Course'] =='BSCM'), 'Influence']
-    g3 = df1.loc[(df1['Course'] =='BSBA'), 'Infleunce']
+    g3 = df1.loc[(df1['Course'] =='BSBA'), 'Influence']
     g4 = df1.loc[(df1['Course'] =='BSHM'), 'Influence']
 
     # Perform one-way ANOVA test
