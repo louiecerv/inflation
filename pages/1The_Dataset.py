@@ -20,7 +20,7 @@ def app():
     if "le_list" not in st.session_state:
         st.session_state.le_list = []
 
-    st.subheader('Introduction')
+    st.subheader('Statical Analysis on the Factors that Could Possible Affect the E-banking Usage')
     text = """CBM Student E-Banking Usage Dataset
     \nThis dataset investigates the factors that affect e-banking usage and spending habits 
     among students at CBM.
@@ -171,7 +171,7 @@ def app():
     significant. It's possible that usage level is more influenced by factors 
     other than family income."""
     st.write(text)
-    
+
     st.subheader('ANOVA Test')
 
     text = """ANOVA, or Analysis of Variance, is a statistical technique used to compare the 
