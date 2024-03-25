@@ -20,7 +20,7 @@ def app():
     if "le_list" not in st.session_state:
         st.session_state.le_list = []
 
-    st.subheader('Statistical Analysis on the Factors that Could Possible Affect the E-banking Usage')
+    st.subheader('Statistical Analysis on the Factors that Could Possible Affect the Spending Habits')
     text = """CBM Student E-Banking Usage Dataset
     \nThis dataset investigates the factors that affect e-banking usage and spending habits 
     among students at CBM.
@@ -38,7 +38,6 @@ def app():
         st.write(text)
 
     df = pd.read_csv('influence.csv', header=0)
-    #df = df.drop('Usage', axis = 1)
 
     # Shuffle the DataFrame
     df = df.sample(frac=1)
@@ -62,7 +61,7 @@ def app():
 
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)
-    plt.title('Frequency distribution of E-banking Usage')
+    plt.title('Frequency distribution of Influences on Spending Habits')
     st.pyplot(fig)
    
     with st.expander("CLick to view unique values"):
@@ -98,7 +97,7 @@ def app():
 
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
-    st.write('The e-banking usage means and std when grouped according to Influence Level:')
+    st.write('The spending habit influence means and std when grouped according to Influence Level:')
     mean_std(df, "influencelevel")
     st.write('The spending influence means and std when grouped according to Sex:')
     plot_usage_by(df, "Sex")
@@ -109,89 +108,36 @@ def app():
     st.write('The spending influence means and std when grouped according to Course:')
     plot_usage_by(df, "Course")
     mean_std(df, "Course")
-    st.write('The spending usage means and std when grouped according to Income:')
+    st.write('The spending influence means and std when grouped according to Income:')
     plot_usage_by(df, "Income")
     mean_std(df, "Income")
 
     st.subheader('Inferential Statistics')
-    text = """Chi-square test: This is a statistical method used to determine if there is 
-    a significant association between two categorical variables. For example, if we want 
-    to know if there is a significant association between sex and levels of usage of 
-    online payment, you can use a chi-square test to determine if there is a significant
-    difference in the distribution of responses between males and females."""
+    text = """insert interpretation """
     st.write(text)
-    st.subheader('Chi-square Test of Sex and Usage Level')
+    st.subheader('Chi-square Test of Sex and Spending Influence Level')
     chi_square(df, "Sex")
-    text = """Based on the chi-square test results, there is not enough evidence to conclude 
-    that there's a statistically significant association between sex and usage level. 
-    Chi-square statistic (4.10): This statistic doesn't provide direct evidence for or 
-    against an association. It's used in the calculation of the p-value. Degrees of freedom (4): 
-    This indicates the number of independent categories used in the analysis.
-    p-value (0.39): This is the probability of observing a chi-square statistic this extreme 
-    or more extreme, assuming there's no real association between sex and usage level 
-    (null hypothesis). A high p-value (greater than 0.05, in this case) suggests we 
-    fail to reject the null hypothesis. In other words, the observed difference in usage 
-    level by sex could be due to chance. Therefore, we can't claim that sex has a statistically 
-    significant influence on usage level based on this test. It's possible that there's a weak 
-    association that the sample size or test wasn't powerful enough to detect, or 
-    there might not be a connection at all"""
+    text = """insert interpretation """
     st.write(text)
 
-    st.subheader('Chi-square Test of Course and Usage Level')
+    st.subheader('Chi-square Test of Course and Spending Influence Level')
     chi_square(df, "Course")
-    text = """The chi-square test result with a p-value of 0.13 (greater than a common significance
-    level of 0.05) indicates that we fail to reject the null hypothesis. In other words, 
-    there is not enough evidence to conclude that there's a statistically significant 
-    association between course and usage level."""
+    text = """insert interpretation """
     st.write(text)
 
-    st.subheader('Chi-square Test of Year Level and Usage Level')
+    st.subheader('Chi-square Test of Year Level and Spending Influence Level')
     chi_square(df, "Year Level")
-    text = """Based on the chi-square test statistic and p-value, there is not enough evidence
-    to reject the null hypothesis.  In other words, the data does not show a statistically 
-    significant association between year level and usage level.
-    Therefore, we cannot conclude that there's a relationship between year level and usage 
-    level in this dataset.  It's possible that year level does influence usage level, 
-    but this particular study didn't find enough evidence to support that claim."""
+    text = """insert interpretation """
     st.write(text)
 
-    st.subheader('Chi-square Test of Income and Usage Level')
+    st.subheader('Chi-square Test of Income and Spending Influence Level')
     chi_square(df, "Income")
-    text = """Based on the chi-square test result, there is no statistically significant 
-    association between family income and usage level. 
-    Chi-square statistic (11.27): This statistic doesn't tell us much by itself, 
-    but it's used in calculating the p-value.Degrees of freedom (8): This indicates the 
-    number of independent categories used in the analysis (3 for income and 3 for usage level).
-    p-value (0.19): This is the most important result. Since it's greater than 0.05 
-    (common significance level), we fail to reject the null hypothesis. 
-    In other words, the observed difference in usage level across income groups is 
-    likely due to chance, and there's not enough evidence to conclude a 
-    genuine relationship.  In simpler terms, while there might be some differences in usage 
-    level between different income groups, these differences are probably not 
-    significant. It's possible that usage level is more influenced by factors 
-    other than family income."""
+    text = """insert interpretation """
     st.write(text)
 
     st.subheader('ANOVA Test')
 
-    text = """ANOVA, or Analysis of Variance, is a statistical technique used to compare the 
-    means of two or more groups. It does this by breaking down the total variance in the 
-    data into two components:
-    \nVariance between groups: This represents the differences between the average 
-    values of the groups.
-    \nVariance within groups: This represents the variation around the mean within each group.
-    ANOVA then calculates a statistic called the F-statistic. This statistic compares the variance
-    between groups to the variance within groups. If the F-statistic is large, it suggests that 
-    the differences between the group means are statistically significant. In other words, 
-    it's likely that there's a true difference between the groups, not just random chance.
-    \nIn essence, ANOVA helps you assess whether observed differences in group means are 
-    meaningful or not.
-    \nThe F-statistic measures the difference between the means of the groups relative to the 
-    variability within the groups.
-    \nThe p-value indicates the probability of observing such a difference by chance, assuming no 
-    real effect of sex on usage.
-    \nA statistically significant result (p-value < 0.05) suggests that the variable has a significant 
-    effect on e-banking usage."""
+    text = """insert interpretation """
     st.write(text)
 
     g1 = df1.loc[(df1['Sex'] =='Male'), 'Usage']
@@ -270,7 +216,7 @@ def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
 
     # Calculate mean and standard deviation of usage for each group
-    results = grouped_data['Usage'].agg(['mean', 'std'])
+    results = grouped_data['Influence'].agg(['mean', 'std'])
     # Print the results
     st.write(results)
 
@@ -306,7 +252,7 @@ def plot_usage_by(df, column):
 
 def chi_square(df, column):
 # Generate a contingency table
-    cont_table = pd.crosstab(df[column], df['usagelevel'])
+    cont_table = pd.crosstab(df[column], df['influencelevel'])
     # Display the contingency table
     st.write(cont_table)    
     # perform a chi-square test
