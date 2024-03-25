@@ -156,7 +156,14 @@ def app():
 
     st.subheader('Chi-square Test of Income and Spending Influence Level')
     chi_square(df, "Income")
-    text = """insert interpretation """
+    text = """Based on the chi-square test result, there is no statistically significant association
+    between spending habit influence level and family income. Chi-square statistic (7.22) - 
+    This statistic doesn't provide direct evidence for or against an association. Degrees of freedom 
+    (8) - This indicates the number of independent categories used in the analysis. P-value (0.51) - 
+    This is the crucial value. A high p-value (greater than 0.05, which is commonly used as a 
+    significance level) suggests we should fail to reject the null hypothesis. In this case, 
+    the null hypothesis is that there's no association between spending habit influence 
+    level and family income."""
     st.write(text)
 
     st.subheader('ANOVA Test')
