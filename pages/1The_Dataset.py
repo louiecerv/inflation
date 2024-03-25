@@ -50,6 +50,17 @@ def app():
     display_freqs(df, "Course")
     display_freqs(df, "Income")
 
+    # Create a figure and axes object
+    fig, ax = plt.subplots()
+
+    # Create the countplot using the axes object
+    p = sns.countplot(x="Usage", data=df, palette="Set1", ax=ax)
+
+    # Rotate x-axis labels for better readability
+    plt.setp(p.get_xticklabels(), rotation=90)
+    plt.title('Frequency distribution of E-banking Usage')
+    st.pyplot(fig)
+   
     with st.expander("CLick to view unique values"):
         # Get column names and unique values
         columns = df.columns
@@ -117,7 +128,6 @@ def display_freqs(df, column):
     plt.ylabel("Frequency")
     plt.title('Frequency of ' + column)
     st.pyplot(fig)
-
 
 #run the app
 if __name__ == "__main__":
