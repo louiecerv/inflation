@@ -119,7 +119,7 @@ def app():
     difference in the distribution of responses between males and females."""
     st.write(text)
 
-    chi_square("Sex")
+    chi_square(df, "Sex")
 
     
 def mean_std(df, column_name):
@@ -162,7 +162,7 @@ def plot_usage_by(df, column):
 
 def chi_square(df, column):
 # Generate a contingency table
-    cont_table = pd.crosstab(df['Sex'], df['usagelevel'])
+    cont_table = pd.crosstab(df[column], df['usagelevel'])
     # Display the contingency table
     st.write(cont_table)    
     # perform a chi-square test
