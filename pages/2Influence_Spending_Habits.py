@@ -233,11 +233,19 @@ def app():
 
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3)
-    st.subheader('ANOVA Test of Income and Spending Habit Influence')
+    st.subheader('ANOVA Test of Family Income and Spending Habit Influence')
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
-    text = """Insert Interpretation"""
+    text = """Based on the p-value (0.2602) of the ANOVA test, we fail to reject 
+    the null hypothesis. This means that there is not enough evidence to conclude 
+    that spending habits and family income level are statistically different. 
+    In other words, the results suggest that there is no significant influence 
+    of family income level on spending habits. A small p-value (typically less than 
+    0.05) indicates that we reject the null hypothesis, suggesting a statistically 
+    significant difference between the groups being compared. A large p-value (like 
+    in this case) suggests that we fail to reject the null hypothesis, implying a 
+    lack of strong evidence for a difference between the groups."""
     st.write(text)
 
 def mean_std(df, column_name):
