@@ -20,7 +20,7 @@ def app():
     if "le_list" not in st.session_state:
         st.session_state.le_list = []
 
-    st.subheader('Statistical Analysis on the Factors that Could Possible Affect the E-banking Usage')
+    st.subheader('Statistical Analysis on the Factors that Could Affect the E-banking Usage')
     text = """CBM Student E-Banking Usage Dataset
     \nThis dataset investigates the factors that affect e-banking usage and spending habits 
     among students at CBM.
