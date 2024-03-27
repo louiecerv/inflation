@@ -92,6 +92,8 @@ def app():
 
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
+    st.write('The inflation awareness means and std of the sample')
+    plot_usage_by(df, "awarenesslevel")
     st.write('The inflation awareness means and std when grouped according to Sex:')
     plot_usage_by(df, "Sex")
     mean_std(df, "Sex")
