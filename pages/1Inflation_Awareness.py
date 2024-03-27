@@ -312,13 +312,11 @@ def plot_usage_by(df, column):
     # Display the plot within the container
     container.pyplot(fig)
 
-    # Add CSS to container using st.write (adjust width as needed)
+    # Add CSS to the container using st.write (adjust width as needed)
     st.write("""
     <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        .stContainer {
-        width: 200px; 
+        .plot-container {
+        width: 400px;  /* Adjust width here */
         margin: auto;
         }
     </style>
