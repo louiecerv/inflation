@@ -264,7 +264,7 @@ def display_freqs(df, column):
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
 
     # Create the pie chart
-    wedges, texts, autotexts = ax1.pie(sizes, labels=df[column], autopct='%1.0f%%',
+    wedges, texts, autotexts = ax1.pie(sizes, autopct='%1.0f%%',
                                     startangle=140, colors=custom_colours,
                                     textprops={'fontsize': 10}, explode=[0, 0.05])
     ax1.set_title('Distribution of ' + column)
