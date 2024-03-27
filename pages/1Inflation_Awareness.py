@@ -146,8 +146,6 @@ def plot_usage_by(df, column):
 
     # Set the title and adjust layout
     ax.set_title("Awareness Level Grouped by " + column, fontsize=14)
-    # Rotate x-axis labels for better readability
-    plt.setp(p.get_xticklabels(), rotation=90)    
     plt.tight_layout()  # Prevent overlapping elements
 
     # Display the plot
