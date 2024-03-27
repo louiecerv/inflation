@@ -44,7 +44,7 @@ def app():
 
     # Print the results
     st.write("Spearman Rank Correlation Coefficient:", spearman_coeff)
-    sr.write("p-value:", p_value)
+    st.write("p-value:", p_value)
 
 #run the app
 if __name__ == "__main__":
