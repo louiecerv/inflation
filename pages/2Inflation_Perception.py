@@ -31,7 +31,35 @@ def app():
 
     st.subheader('Frequency counts')
 
-    display_freqs(df, "Sex")
+    # Calculate counts for each sex
+    scounts = df['Sex'].value_counts()
+    # Print the frequency table
+    st.write(scounts)
+
+    # Define labels and sizes for the pie chart
+    labels = ['Female', 'Male']
+    sizes = [scounts[0], scounts[1]]
+
+    # Create a figure and subplots
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
+
+    # Create the pie chart
+    wedges, texts, autotexts = ax1.pie(sizes, labels=labels, autopct='%1.0f%%',
+                                    startangle=140, colors=custom_colours,
+                                    textprops={'fontsize': 10}, explode=[0, 0.05])
+    ax1.set_title('Sex Distribution')
+
+    # Create the bar chart using seaborn
+    ax2 = sns.barplot(x=df['Sex'].unique(), y=df['Sex'].value_counts(), ax=ax2, palette='viridis')
+    ax2.set_xlabel('Sex')
+    ax2.set_ylabel('Frequency')
+    ax2.set_title('Sex Count')
+
+    # Tight layout to prevent overlapping elements
+    plt.tight_layout()
+    st.pyplot(fig)
+
+    #display_freqs(df, "Sex")
     display_freqs(df, "Age")
     display_freqs(df, "Civil Status")
     display_freqs(df, "Educ")
