@@ -128,6 +128,29 @@ def app():
     effect on e-banking usage."""
     st.write(text)
 
+def mean_std(df, column_name):
+    grouped_data = df.groupby(column_name)
+
+    # Calculate mean and standard deviation of usage for each group
+    results = grouped_data['Awareness'].agg(['mean', 'std'])
+    # Print the results
+    st.write(results)
+
+def display_freqs(df, column):
+    # Get the frequency count of each class in the column
+    col_counts = df[column].value_counts()
+
+    # Print the frequency table
+    st.write(col_counts)
+    
+    # Create the figure and axes objects    
+    fig, ax = plt.subplots()  # Create a figure and a single axes
+    # Create a bar chart of the frequency using seaborn
+    sns.barplot(x=col_counts.index, y=col_counts.values)
+    plt.xlabel(column)
+    plt.ylabel("Frequency")
+    plt.title('Frequency of ' + column)
+    st.pyplot(fig)
 
 #run the app
 if __name__ == "__main__":
