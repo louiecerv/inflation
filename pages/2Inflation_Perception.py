@@ -258,7 +258,7 @@ def display_freqs(df, column):
     st.write(scounts)
     custom_colours = ['#ff7675', '#74b9ff']
     # Define labels and sizes for the pie chart
-    sizes = [scounts[0], scounts[1]]
+    sizes = scounts
 
     # Create a figure and subplots
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
