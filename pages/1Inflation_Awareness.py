@@ -111,6 +111,20 @@ def app():
     effect on e-banking usage."""
     st.write(text)
 
+    st.subheader('Independent Sample T-Test')
+    text = """The independent samples t-test, also called the two-sample t-test, 
+    is a statistical tool used to compare the means of two independent groups. 
+    It helps you assess if there's a significant difference in the average values 
+    between two unrelated groups.
+    \nPurpose: It determines if there's a statistically significant difference between
+    the means of two independent groups on a continuous variable.
+    \nOutputs: The test provides a t-statistic and a p-value. The p-value tells you 
+    how likely it is to observe such a difference by chance, assuming the null hypothesis (no difference between means) is true. A low p-value (typically below 0.05) indicates a statistically significant difference.
+    By interpreting the p-value, you can conclude whether the observed difference in 
+    means between the two groups is likely due to random chance or reflects a true 
+    difference in the populations they represent."""
+    st.write(text)
+
     st.subheader('T-test on the Level of Awareness Grouped by Sex')
     male_awareness = df1[df1['Sex'] == 'Male']['Awareness']
     female_awareness = df1[df1['Sex'] == 'Female']['Awareness']
@@ -119,7 +133,22 @@ def app():
     # Print the results
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)
-
+    text = """The results of the independent samples t-test do not show statistically 
+    significant evidence of a difference in awareness levels between males and females. 
+    \nT-statistic: -0.5621. In t-tests, this statistic doesn't directly tell about 
+    significance but indicates the direction and strength of the effect. 
+    A negative value means the average awareness level for females was higher than 
+    for males in this case. However, the magnitude is very small, close to zero.
+    \nP-value: 0.5751. This is the key value for statistical significance. A common 
+    threshold for significance is 0.05. Since the p-value here (0.5751) is much 
+    greater than 0.05, we fail to reject the null hypothesis. The null hypothesis 
+    states that there is no difference between the groups (in this case, males and females
+    regarding awareness level).Based on this t-test, there's not enough evidence to 
+    say that there's a significant difference in awareness levels between males and females. 
+    It's possible that a larger sample size or a different study design might reveal
+    a difference, but this particular test doesn't provide conclusive evidence."""
+    st.write(text)
+    
     st.subheader('T-test on the Level of Awareness Grouped by Civil Status')
     single_awareness = df1[df1['Civil Status'] == 'Single']['Awareness']
     married_awareness = df1[df1['Civil Status'] == 'Married']['Awareness']
