@@ -120,8 +120,9 @@ def app():
     # Perform the t-test
     t_statistic, p_value = stats.ttest_ind(male_awareness, female_awareness)
     # Print the results
-    st.write("t-statistic:", t_statistic)
-    st.write("p-value:", p_value)
+    st.write("t-statistic: {:.2f}".format(t_statistic))
+    st.write("p-value: {:.4f}".format(p_value))  
+
     text = """The results of the independent sample t-test indicate that 
     there is no statistically significant difference in the levels of 
     perception of inflation between males and females. This is because 
@@ -138,9 +139,11 @@ def app():
     # Perform the t-test
     t_statistic, p_value = stats.ttest_ind(single_awareness, married_awareness)
     # Print the results
-    st.write("t-statistic:", t_statistic)
-    st.write("p-value:", p_value)
-    text = """he results of the independent samples t-test indicate that there 
+
+    st.write("t-statistic: {:.2f}".format(t_statistic))
+    st.write("p-value: {:.4f}".format(p_value))  
+
+    text = """The results of the independent samples t-test indicate that there 
     is no statistically significant difference between the levels of perception of 
     inflation for single and married people. 
     \nt-statistic (0.5268): This value doesn't tell us much by itself in this 
@@ -158,8 +161,9 @@ def app():
     # Perform the t-test
     t_statistic, p_value = stats.ttest_ind(lower_awareness, mid_awareness)
     # Print the results
-    st.write("t-statistic:", t_statistic)
-    st.write("p-value:", p_value)    
+    st.write("t-statistic: {:.2f}".format(t_statistic))
+    st.write("p-value: {:.4f}".format(p_value))  
+
     text = """The results of the independent sample t-test indicate that there is no 
     statistically significant difference in the levels of perception of inflation 
     between low-income and lower-middle-income individuals. 
@@ -189,6 +193,7 @@ def app():
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))   
+    
     text = """The results of the ANOVA test indicate that there is not 
     statistically significant evidence to reject the null hypothesis. 
     In simpler terms, this means we don't have enough evidence to conclude 
