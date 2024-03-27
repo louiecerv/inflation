@@ -33,6 +33,7 @@ def app():
 
     df = pd.read_csv('inflation-final.csv', header=0)
     df = df.drop('Perception', axis = 1)
+    df = df.drop('perceptionlevel', axis = 1)
 
     st.write('Browse the dataset')
     st.write(df)
@@ -158,10 +159,10 @@ def plot_usage_by(df, column):
     fig, ax = plt.subplots(figsize=(6, 3))
 
     # Create the countplot directly on the provided axes
-    sns.countplot(x=column, data=df, hue='Awareness', palette='bright', ax=ax)
+    sns.countplot(x=column, data=df, hue='awarenesslevel', palette='bright', ax=ax)
 
     # Set the title and adjust layout
-    ax.set_title("Awareness Grouped by " + column, fontsize=14)
+    ax.set_title("Awareness Level Grouped by " + column, fontsize=14)
     plt.tight_layout()  # Prevent overlapping elements
 
     # Display the plot

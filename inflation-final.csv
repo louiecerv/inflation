@@ -1,115 +1,115 @@
-Office,Age,Sex,Civil Status,Educ,SEStatus,Awareness,Perception
-Accounting,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0
-Accounting,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.625,4.0
-Accounting,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,5.0
-Accounting,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.75,4.25
-Alumni Office,36-50 years old,Male,Single,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.125,3.75
-CAS,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.875
-CAS,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.75
-CAS - Research,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0
-Cashiers Office,36-50 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.75
-CBM,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,5.0
-Central Lab,18-35 years old,Female,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.375,4.75
-Central Lab,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,4.875
-Central Lab,18-35 years old,Male,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,5.0
-Central Lab,18-35 years old,Male,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,5.0
-CFL,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,5.0
-CICT,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.75
-CICT,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.25
-COA,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0
-COA,36-50 years old,Male,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,5.0
-COC,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.5
-COD,36-50 years old,Female,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.75,4.5
-COE,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,3.375
-COE - Distance Ed.,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.625
-COL,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,5.0
-COL,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.5,4.75
-COM,36-50 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,4.125
-COM,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.125
-COM,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,5.0
-COM,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.875
-CON,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.75,5.0
-COP,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.125
-COP (Sports and Athletics),above 50 years old,Male,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",5.0,5.0
-CPP Office,above 50 years old,Female,Single,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.25,4.375
-CTE,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0
-DI,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.25
-DI,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.875
-DROP IN,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.875
-Finance Office,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0
-GAD (Gender & Development),18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.625
-GSO,36-50 years old,Male,Married,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.75
-GSO,36-50 years old,Male,Married,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.25
-GSO,18-35 years old,Male,Married,Elementary Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.5
-GSO,36-50 years old,Male,Married,Elementary Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.625
-GSO,36-50 years old,Male,Married,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.625,4.625
-GSO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.375
-GSO,36-50 years old,Male,Married,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.75
-GTBI,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.625
-Hometel/Cafeteria,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.125
-Hometel/Cafeteria,18-35 years old,Male,Single,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.0
-Hometel/Cafeteria,36-50 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.375
-Hometel/Cafeteria,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.0
-HRMO,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.375
-HRMO,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,5.0
-HRMO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.875
-HRMO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,4.0
-HRMO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.75,4.125
-ILLO,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,4.75
-ILS,36-50 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,5.0
-ILS (DSTT),18-35 years old,Female,Single,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.875
-ILS-Librarian,36-50 years old,Female,Married,Master's Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.75,5.0
-KTTBDC,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.75
-Medical/Dental Clinic,18-35 years old,Female,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.375,4.125
-MIS,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.125
-NSTP,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.75
-OSA,36-50 years old,Female,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.5,4.0
-PAMCO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.25
-PRES OFFICE,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.875
-Procurement Office,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,3.75
-Procurement Office,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.875
-QA,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.75
-Records Office,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.75
-Records Office,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.75
-Registrars Office,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.5
-Research,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,5.0
-Research,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,4.625
-Research,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.625
-Research,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.125
-SBSRERC,36-50 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.375
-Staff House,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.75,3.5
-Supply,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.875
-Supply,36-50 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,4.375
-Supply,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0
-Supply,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.0
-Testing Center,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.625,3.0
-UBRERC,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.625
-UDRRMC,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0
-UEDC,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,5.0
-UEDC,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0
-UEDC,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0
-ULAC,36-50 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,5.0
-ULRC,36-50 years old,Male,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",5.0,4.75
-ULRC,36-50 years old,Female,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.875,5.0
-ULRC,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.875
-ULRC,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.5
-ULRC,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.875
-UPDO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.75
-UPDO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,4.875
-UPP / UPHB (Printing Press),18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0
-UPP / UPHB (Printing Press),18-35 years old,Female,Married,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.0
-UPP / UPHB (Printing Press),36-50 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.75
-UPP / UPHB (Printing Press),18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.625
-UPP / UPHB (Printing Press),above 50 years old,Female,Single,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,5.0
-UPP / UPHB (Printing Press),18-35 years old,Male,Single,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.375,4.5
-UPP / UPHB (Printing Press),36-50 years old,Male,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,3.625
-UPP / UPHB (Printing Press),36-50 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0
-URDC,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.875
-URGP,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0
-VPAA,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.5
-VPAA,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.5
-VPAA,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.5
-VPAA,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,5.0
-VPAF,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.25
-VPRET,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,5.0
-WESVAARDEC,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.625,4.0
+Office,Age,Sex,Civil Status,Educ,SEStatus,Awareness,Perception,awarenesslevel,perceptionlevel
+Accounting,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0,Very High,Very High
+Accounting,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.625,4.0,High,High
+Accounting,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,5.0,Very High,Very High
+Accounting,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.75,4.25,High,Very High
+Alumni Office,36-50 years old,Male,Single,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.125,3.75,High,High
+CAS,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.875,Very High,Very High
+CAS,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.75,Very High,Very High
+CAS - Research,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0,Very High,Very High
+Cashiers Office,36-50 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.75,Very High,Very High
+CBM,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,5.0,Very High,Very High
+Central Lab,18-35 years old,Female,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.375,4.75,Very High,Very High
+Central Lab,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,4.875,Very High,Very High
+Central Lab,18-35 years old,Male,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,5.0,Very High,Very High
+Central Lab,18-35 years old,Male,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,5.0,Very High,Very High
+CFL,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,5.0,Very High,Very High
+CICT,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.75,Very High,Very High
+CICT,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.25,Very High,Very High
+COA,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0,Very High,Very High
+COA,36-50 years old,Male,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,5.0,Very High,Very High
+COC,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.5,Very High,Very High
+COD,36-50 years old,Female,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.75,4.5,Very High,Very High
+COE,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,3.375,Very High,Moderate
+COE - Distance Ed.,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.625,Very High,Very High
+COL,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,5.0,Very High,Very High
+COL,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.5,4.75,High,Very High
+COM,36-50 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,4.125,High,High
+COM,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.125,Very High,High
+COM,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,5.0,Very High,Very High
+COM,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.875,Very High,Very High
+CON,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.75,5.0,High,Very High
+COP,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.125,Very High,High
+COP (Sports and Athletics),above 50 years old,Male,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",5.0,5.0,Very High,Very High
+CPP Office,above 50 years old,Female,Single,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.25,4.375,Very High,Very High
+CTE,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0,Very High,Very High
+DI,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.25,Very High,Very High
+DI,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.875,Very High,Very High
+DROP IN,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.875,Very High,Very High
+Finance Office,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0,Very High,Very High
+GAD (Gender & Development),18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.625,Very High,Very High
+GSO,36-50 years old,Male,Married,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.75,Very High,Very High
+GSO,36-50 years old,Male,Married,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.25,Very High,Very High
+GSO,18-35 years old,Male,Married,Elementary Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.5,Very High,Very High
+GSO,36-50 years old,Male,Married,Elementary Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.625,Very High,Very High
+GSO,36-50 years old,Male,Married,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.625,4.625,High,Very High
+GSO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.375,Very High,Very High
+GSO,36-50 years old,Male,Married,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.75,Very High,Very High
+GTBI,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.625,Very High,Very High
+Hometel/Cafeteria,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.125,Very High,High
+Hometel/Cafeteria,18-35 years old,Male,Single,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.0,High,High
+Hometel/Cafeteria,36-50 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.375,Very High,Very High
+Hometel/Cafeteria,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.0,High,High
+HRMO,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.375,High,Very High
+HRMO,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,5.0,Very High,Very High
+HRMO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.875,Very High,Very High
+HRMO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,4.0,High,High
+HRMO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.75,4.125,High,High
+ILLO,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,4.75,High,Very High
+ILS,36-50 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,5.0,Very High,Very High
+ILS (DSTT),18-35 years old,Female,Single,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.875,Very High,Very High
+ILS-Librarian,36-50 years old,Female,Married,Master's Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.75,5.0,Very High,Very High
+KTTBDC,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.75,High,Very High
+Medical/Dental Clinic,18-35 years old,Female,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.375,4.125,Very High,High
+MIS,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.125,Very High,High
+NSTP,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.75,High,Very High
+OSA,36-50 years old,Female,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.5,4.0,Very High,High
+PAMCO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.25,Very High,Very High
+PRES OFFICE,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.875,Very High,Very High
+Procurement Office,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,3.75,High,High
+Procurement Office,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.875,Very High,Very High
+QA,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.75,Very High,Very High
+Records Office,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.75,Very High,Very High
+Records Office,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,4.75,Very High,Very High
+Registrars Office,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.5,High,Very High
+Research,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,5.0,Very High,Very High
+Research,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",5.0,4.625,Very High,Very High
+Research,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.625,Very High,Very High
+Research,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.125,High,High
+SBSRERC,36-50 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.375,Very High,Very High
+Staff House,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.75,3.5,High,High
+Supply,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.875,Very High,Very High
+Supply,36-50 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,4.375,High,Very High
+Supply,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0,Very High,Very High
+Supply,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.0,High,High
+Testing Center,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.625,3.0,High,Moderate
+UBRERC,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.625,Very High,Very High
+UDRRMC,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0,Very High,Very High
+UEDC,18-35 years old,Female,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,5.0,Very High,Very High
+UEDC,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,5.0,Very High,Very High
+UEDC,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0,Very High,Very High
+ULAC,36-50 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,5.0,Very High,Very High
+ULRC,36-50 years old,Male,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",5.0,4.75,Very High,Very High
+ULRC,36-50 years old,Female,Married,College Graduate,"Lower Middle Income Class (Between ?18,201 to ?36,400)",4.875,5.0,Very High,Very High
+ULRC,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.375,4.875,Very High,Very High
+ULRC,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.5,Very High,Very High
+ULRC,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.875,Very High,Very High
+UPDO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.75,Very High,Very High
+UPDO,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,4.875,High,Very High
+UPP / UPHB (Printing Press),18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0,Very High,Very High
+UPP / UPHB (Printing Press),18-35 years old,Female,Married,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.0,4.0,High,High
+UPP / UPHB (Printing Press),36-50 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.25,4.75,Very High,Very High
+UPP / UPHB (Printing Press),18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.625,Very High,Very High
+UPP / UPHB (Printing Press),above 50 years old,Female,Single,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,5.0,Very High,Very High
+UPP / UPHB (Printing Press),18-35 years old,Male,Single,High School Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.375,4.5,Moderate,Very High
+UPP / UPHB (Printing Press),36-50 years old,Male,Married,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.125,3.625,High,High
+UPP / UPHB (Printing Press),36-50 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0,Very High,Very High
+URDC,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.5,4.875,Very High,Very High
+URGP,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.625,5.0,Very High,Very High
+VPAA,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,4.5,Very High,Very High
+VPAA,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.5,Very High,Very High
+VPAA,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.5,Very High,Very High
+VPAA,18-35 years old,Male,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,5.0,Very High,Very High
+VPAF,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.875,4.25,Very High,Very High
+VPRET,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",4.75,5.0,Very High,Very High
+WESVAARDEC,18-35 years old,Female,Single,College Graduate,"Low Income Class (Between ?9,100 to ?18,200)",3.625,4.0,High,High
