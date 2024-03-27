@@ -255,12 +255,16 @@ def mean_std(df, column_name):
     st.write(results)
 
 def display_freqs(df, column):
+
     # Get the frequency count of each class in the column
     col_counts = df[column].value_counts()
 
     # Print the frequency table
     st.write(col_counts)
-    
+
+    # Create a container
+    container = st.container()
+
     # Create the figure and axes objects    
     fig, ax = plt.subplots()  # Create a figure and a single axes
     # Create a bar chart of the frequency using seaborn
@@ -272,7 +276,22 @@ def display_freqs(df, column):
     plt.setp(p.get_xticklabels(), rotation=90)    
     plt.title('Frequencies of ' + column)
     plt.tight_layout()  # Prevent overlapping elements    
-    st.pyplot(fig)
+
+    # Display the plot within the container
+    container.pyplot(fig)
+
+    # Add CSS to container using st.write (adjust width as needed)
+    st.write("""
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        .stContainer {
+        width: 400px; 
+        margin: auto;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
 
 def plot_usage_by(df, column):
 
