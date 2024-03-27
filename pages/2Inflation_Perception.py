@@ -12,28 +12,14 @@ import time
 # Define the Streamlit app
 def app():
 
-    if "le_list" not in st.session_state:
-        st.session_state.le_list = []
-
-    st.subheader('Statistical Analysis on the Factors that Could Affect the Inflation Awareness')
-    text = """CBM Student E-Banking Usage Dataset
-    \nThis dataset investigates the factors that affect inflation awareness 
-    among job order workers in a state university.
-    \nFeatures:
-    sex (categorical): (Male, Female)
-    age (categorical): (18-35 years old, 36-50 years old, above 50 years old)
-    Civil Status (categorical): (Single, Married)
-    Educational Attainment(categorical): (Elementary Graduate, High School Graduate, College Graduate, Masteral Graduate)
-    Socio-economic status (categorical): (low income, lower-middle income)
-    Awareness (ordinal): Awareness as measured by a Likert scale
-    \nSampling Method:
-    Stratified random sampling"""
+    st.subheader('Statistical Analysis on the Factors that Could Affect the Inflation Perception')
+    text = """Describe the inflation perception in the paper..."""
     with st.expander("About the Dataset. CLick to expand."):
         st.write(text)
 
     df = pd.read_csv('inflation-final.csv', header=0)
-    df = df.drop('Perception', axis = 1)
-    df = df.drop('perceptionlevel', axis = 1)
+    df = df.drop('Awareness', axis = 1)
+    df = df.drop('awarenesslevel', axis = 1)
 
     st.write('Browse the dataset')
     st.write(df)
@@ -52,11 +38,11 @@ def app():
     fig, ax = plt.subplots()
 
     # Create the countplot using the axes object
-    p = sns.countplot(x="Awareness", hue = "Awareness", data=df, palette="Set1", ax=ax, legend=False)
+    p = sns.countplot(x="Perception", hue = "Perception", data=df, palette="Set1", ax=ax, legend=False)
 
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)
-    plt.title('Frequency distribution of Inflation Awareness')
+    plt.title('Frequency distribution of Inflation Perception')
     st.pyplot(fig)
    
     with st.expander("CLick to view unique values"):
@@ -71,21 +57,21 @@ def app():
 
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
-    st.write('The inflation awareness means and std of all respondents as an entire group')
-    plot_usage_by(df, "awarenesslevel")
-    st.write('The inflation awareness means and std when grouped according to Sex:')
+    st.write('The inflation perception means and std of all respondents as an entire group')
+    plot_usage_by(df, "perceptionlevel")
+    st.write('The inflation perception means and std when grouped according to Sex:')
     plot_usage_by(df, "Sex")
     mean_std(df, "Sex")
-    st.write('The inflation awareness means and std when grouped according to Age:')
+    st.write('The inflation perception means and std when grouped according to Age:')
     plot_usage_by(df, "Age")
     mean_std(df, "Age")
-    st.write('The inflation awareness means and std when grouped according to Civil Status:')
+    st.write('The inflation perception means and std when grouped according to Civil Status:')
     plot_usage_by(df, "Civil Status")
     mean_std(df, "Civil Status")
-    st.write('The inflation awareness means and std when grouped according to Educational Attainment:')
+    st.write('The inflation perception means and std when grouped according to Educational Attainment:')
     plot_usage_by(df, "Educ")
     mean_std(df, "Educ")
-    st.write('The inflation awareness means and std when grouped according to Socio-Economic Status:')
+    st.write('The inflation perception means and std when grouped according to Socio-Economic Status:')
     plot_usage_by(df, "SEStatus")
     mean_std(df, "SEStatus")
 
@@ -112,8 +98,8 @@ def app():
     st.write(text)
 
     st.subheader('T-test on the Level of Awareness Grouped by Sex')
-    male_awareness = df1[df1['Sex'] == 'Male']['Awareness']
-    female_awareness = df1[df1['Sex'] == 'Female']['Awareness']
+    male_awareness = df1[df1['Sex'] == 'Male']['Perception']
+    female_awareness = df1[df1['Sex'] == 'Female']['Perception']
     # Perform the t-test
     t_statistic, p_value = stats.ttest_ind(male_awareness, female_awareness)
     # Print the results
@@ -121,8 +107,8 @@ def app():
     st.write("p-value:", p_value)
 
     st.subheader('T-test on the Level of Awareness Grouped by Civil Status')
-    single_awareness = df1[df1['Civil Status'] == 'Single']['Awareness']
-    married_awareness = df1[df1['Civil Status'] == 'Married']['Awareness']
+    single_awareness = df1[df1['Civil Status'] == 'Single']['Perception']
+    married_awareness = df1[df1['Civil Status'] == 'Married']['Perception']
     # Perform the t-test
     t_statistic, p_value = stats.ttest_ind(single_awareness, married_awareness)
     # Print the results
@@ -130,8 +116,8 @@ def app():
     st.write("p-value:", p_value)
 
     st.subheader('T-test on the Level of Awareness Grouped by Socio-economic Status')
-    lower_awareness = df1[df1['SEStatus'] == 'Low Income Class (Between ?9,100 to ?18,200)']['Awareness']
-    mid_awareness = df1[df1['SEStatus'] == 'Lower Middle Income Class (Between ?18,201 to ?36,400)']['Awareness']
+    lower_awareness = df1[df1['SEStatus'] == 'Low Income Class (Between ?9,100 to ?18,200)']['Perception']
+    mid_awareness = df1[df1['SEStatus'] == 'Lower Middle Income Class (Between ?18,201 to ?36,400)']['Perception']
     # Perform the t-test
     t_statistic, p_value = stats.ttest_ind(lower_awareness, mid_awareness)
     # Print the results
@@ -139,9 +125,9 @@ def app():
     st.write("p-value:", p_value)    
 
     st.subheader('ANOVA test on the Level of Awareness Grouped by Age')
-    g1 = df1.loc[(df1['Age'] =='18-35 years old'), 'Awareness']
-    g2 = df1.loc[(df1['Age'] =='36-50 years old'), 'Awareness']
-    g3 = df1.loc[(df1['Age'] =='above 50 years old'), 'Awareness']
+    g1 = df1.loc[(df1['Age'] =='18-35 years old'), 'Perception']
+    g2 = df1.loc[(df1['Age'] =='36-50 years old'), 'Perception']
+    g3 = df1.loc[(df1['Age'] =='above 50 years old'), 'Perception']
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3)
     # Print the results
@@ -149,10 +135,10 @@ def app():
     st.write("p-value: {:.4f}".format(p_value))    
 
     st.subheader('ANOVA test on the Level of Awareness Grouped by Educational Attainment')
-    g1 = df1.loc[(df1['Educ'] =='Elementary Graduate'), 'Awareness']
-    g2 = df1.loc[(df1['Educ'] =='High School Graduate'), 'Awareness']
-    g3 = df1.loc[(df1['Educ'] =='College Graduate'), 'Awareness']
-    g4 = df1.loc[(df1['Educ'] =="Master's Graduate"), 'Awareness']
+    g1 = df1.loc[(df1['Educ'] =='Elementary Graduate'), 'Perception']
+    g2 = df1.loc[(df1['Educ'] =='High School Graduate'), 'Perception']
+    g3 = df1.loc[(df1['Educ'] =='College Graduate'), 'Perception']
+    g4 = df1.loc[(df1['Educ'] =="Master's Graduate"), 'Perception']
     # Perform one-way ANOVA test
     F_statistic, p_value = stats.f_oneway(g1, g2, g3, g4)
     # Print the results
@@ -162,8 +148,8 @@ def app():
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
 
-    # Calculate mean and standard deviation of usage for each group
-    results = grouped_data['Awareness'].agg(['mean', 'std'])
+    # Calculate mean and standard deviation for each group
+    results = grouped_data['Perception'].agg(['mean', 'std'])
     # Print the results
     st.write(results)
 
@@ -192,10 +178,10 @@ def plot_usage_by(df, column):
     fig, ax = plt.subplots(figsize=(6, 3))
 
     # Create the countplot directly on the provided axes
-    p = sns.countplot(x=column, data=df, hue='awarenesslevel', palette='bright', ax=ax)
+    p = sns.countplot(x=column, data=df, hue='perceptionlevel', palette='bright', ax=ax)
 
     # Set the title and adjust layout
-    ax.set_title("Awareness Level Grouped by " + column, fontsize=14)
+    ax.set_title("Perception Level Grouped by " + column, fontsize=14)
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)
     plt.tight_layout()  # Prevent overlapping elements
