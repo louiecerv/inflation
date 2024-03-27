@@ -12,9 +12,6 @@ import time
 # Define the Streamlit app
 def app():
 
-    if "le_list" not in st.session_state:
-        st.session_state.le_list = []
-
     st.subheader('Statistical Analysis on the Factors that Could Affect the Inflation Awareness')
     text = """Inflation Awareness Among Job Order Workers Dataset
     \nThis dataset investigates the factors that affect inflation awareness 
@@ -56,10 +53,10 @@ def app():
 
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)
-    plt.title('Frequency distribution of Inflation Awareness')
+    plt.title('Frequency distribution of Inflation Awareness of the Respondents taken as one Group')
     st.pyplot(fig)
    
-    with st.expander("CLick to view unique values"):
+    with st.expander("Click to view unique values"):
         # Get column names and unique values
         columns = df.columns
         unique_values = {col: df[col].unique() for col in columns}    
@@ -131,8 +128,9 @@ def app():
     # Perform the t-test
     t_statistic, p_value = stats.ttest_ind(male_awareness, female_awareness)
     # Print the results
-    st.write("t-statistic:", t_statistic)
-    st.write("p-value:", p_value)
+    st.write("t-statistic: {:.2f}".format(t_statistic))
+    st.write("p-value: {:.4f}".format(p_value))  
+
     text = """The results of the independent samples t-test do not show statistically 
     significant evidence of a difference in awareness levels between males and females. 
     \nT-statistic: -0.5621. In t-tests, this statistic doesn't directly tell about 
@@ -155,8 +153,9 @@ def app():
     # Perform the t-test
     t_statistic, p_value = stats.ttest_ind(single_awareness, married_awareness)
     # Print the results
-    st.write("t-statistic:", t_statistic)
-    st.write("p-value:", p_value)
+    st.write("t-statistic: {:.2f}".format(t_statistic))
+    st.write("p-value: {:.4f}".format(p_value))  
+
     text = """The results of the independent samples t-test do not show a 
     statistically significant difference in the level of awareness between 
     single and married workers. 
@@ -183,8 +182,9 @@ def app():
     # Perform the t-test
     t_statistic, p_value = stats.ttest_ind(lower_awareness, mid_awareness)
     # Print the results
-    st.write("t-statistic:", t_statistic)
-    st.write("p-value:", p_value)    
+    st.write("t-statistic: {:.2f}".format(t_statistic))
+    st.write("p-value: {:.4f}".format(p_value))    
+
     text = """The results of the independent sample t-test indicate that there is not a 
     statistically significant difference (p-value > 0.05) in the level of awareness 
     between the low and middle socioeconomic status groups. In other words, we 
@@ -204,7 +204,8 @@ def app():
     F_statistic, p_value = stats.f_oneway(g1, g2, g3)
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
-    st.write("p-value: {:.4f}".format(p_value))    
+    st.write("p-value: {:.4f}".format(p_value))  
+
     text = """The reported F-statistic (0.73) and p-value (0.4826) suggest that there is no 
     statistically significant difference in the mean level of awareness between the 
     age groups that were compared.
@@ -227,6 +228,7 @@ def app():
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))
+
     text = """The results of the ANOVA test suggest that there is not a 
     statistically significant difference in the level of awareness between the four 
     education attainment groups.
@@ -268,7 +270,7 @@ def display_freqs(df, column):
 
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)    
-    plt.title('Frequency of ' + column)
+    plt.title('Frequencies of ' + column)
     plt.tight_layout()  # Prevent overlapping elements    
     st.pyplot(fig)
 
