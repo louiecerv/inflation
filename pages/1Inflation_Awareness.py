@@ -176,7 +176,7 @@ def app():
     sample size or variability in the data might be too high to detect it 
     with this test."""
     st.write(text)
-    
+
     st.subheader('T-test on the Level of Awareness Grouped by Socio-economic Status')
     lower_awareness = df1[df1['SEStatus'] == 'Low Income Class (Between ?9,100 to ?18,200)']['Awareness']
     mid_awareness = df1[df1['SEStatus'] == 'Lower Middle Income Class (Between ?18,201 to ?36,400)']['Awareness']
@@ -185,6 +185,16 @@ def app():
     # Print the results
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)    
+    text = """The results of the independent sample t-test indicate that there is not a 
+    statistically significant difference (p-value > 0.05) in the level of awareness 
+    between the low and middle socioeconomic status groups. In other words, we 
+    cannot reject the null hypothesis that the mean level of awareness is the same 
+    for both groups.
+    \nIt is important to note that the t-statistic is negative, but we cannot interpret
+    the direction of the difference from the t-statistic alone. The t-statistic only 
+    tells us about the magnitude and direction of the difference relative to the null 
+    hypothesis of no difference."""
+    st.write(text)
 
     st.subheader('ANOVA test on the Level of Awareness Grouped by Age')
     g1 = df1.loc[(df1['Age'] =='18-35 years old'), 'Awareness']
@@ -195,7 +205,18 @@ def app():
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))    
-
+    text = """The reported F-statistic (0.73) and p-value (0.4826) suggest that there is no 
+    statistically significant difference in the mean level of awareness between the 
+    age groups that were compared.
+    \nF-statistic (0.73): This value is relatively low, indicating that the 
+    variances of the awareness levels in the age groups are similar. 
+    In an ANOVA test, a high F-statistic would suggest unequal variances.
+    \np-value (0.4826): This value is greater than a common significance 
+    level (0.05). Since the p-value is not less than the significance level, 
+    we fail to reject the null hypothesis. The null hypothesis, in this case, is 
+    that the means of the awareness level are equal between the age groups."""
+    st.write(text)
+    
     st.subheader('ANOVA test on the Level of Awareness Grouped by Educational Attainment')
     g1 = df1.loc[(df1['Educ'] =='Elementary Graduate'), 'Awareness']
     g2 = df1.loc[(df1['Educ'] =='High School Graduate'), 'Awareness']
