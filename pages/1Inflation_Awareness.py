@@ -148,7 +148,7 @@ def app():
     It's possible that a larger sample size or a different study design might reveal
     a difference, but this particular test doesn't provide conclusive evidence."""
     st.write(text)
-    
+
     st.subheader('T-test on the Level of Awareness Grouped by Civil Status')
     single_awareness = df1[df1['Civil Status'] == 'Single']['Awareness']
     married_awareness = df1[df1['Civil Status'] == 'Married']['Awareness']
@@ -157,7 +157,25 @@ def app():
     # Print the results
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)
-
+    text = """The results of the independent samples t-test do not show a 
+    statistically significant difference in the level of awareness between 
+    single and married workers. 
+    \nt-statistic: -0.5622. This statistic doesn't tell us about the direction
+    of the difference (i.e., whether single or married people have higher 
+    awareness) but rather the strength of the evidence against the null 
+    hypothesis (which is that there is no difference). 
+    In this case, the absolute value is very small, indicating weak evidence 
+    against the null hypothesis.
+    \np-value: 0.5751. This is the probability of observing a t-statistic as 
+    extreme or more extreme than the one calculated, assuming the null hypothesis 
+    is true. A common significance level used in hypothesis testing is 0.05. 
+    Since the p-value (0.5751) is greater than 0.05, we fail to reject the 
+    null hypothesis. The data doesn't provide enough evidence to conclude that 
+    there's a significant difference in awareness levels between single and 
+    married people. It's possible that there is a small difference, but the 
+    sample size or variability in the data might be too high to detect it 
+    with this test."""
+    st.write(text)
     st.subheader('T-test on the Level of Awareness Grouped by Socio-economic Status')
     lower_awareness = df1[df1['SEStatus'] == 'Low Income Class (Between ?9,100 to ?18,200)']['Awareness']
     mid_awareness = df1[df1['SEStatus'] == 'Lower Middle Income Class (Between ?18,201 to ?36,400)']['Awareness']
