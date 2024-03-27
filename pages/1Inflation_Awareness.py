@@ -275,8 +275,12 @@ def display_freqs(df, column):
     st.pyplot(fig)
 
 def plot_usage_by(df, column):
+
+    # Create a container
+    container = st.container()
+
     # Create the figure and axes object
-    fig, ax = plt.subplots(figsize=(6, 6))
+    fig, ax = plt.subplots()
 
     # Create the countplot directly on the provided axes
     p = sns.countplot(x=column, data=df, hue='awarenesslevel', palette='bright', ax=ax)
@@ -288,7 +292,19 @@ def plot_usage_by(df, column):
     plt.tight_layout()  # Prevent overlapping elements
 
     # Display the plot
-    st.pyplot(fig)    
+    # Display the plot within the container
+    container.pyplot(fig)
+
+    # Add CSS to container (adjust width as needed)
+    with container.with_css():
+        st.write("""
+        <style>
+            .element {
+            width: 500px; 
+            }
+        </style>
+        """, unsafe_allow_html=True)
+
 
 #run the app
 if __name__ == "__main__":
