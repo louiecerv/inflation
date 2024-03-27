@@ -45,6 +45,30 @@ def app():
     # Print the results
     st.write("Spearman Rank Correlation Coefficient: {:.2f}".format(spearman_coeff))
     st.write("p-value: {:.4f}".format(p_value))
+    text = """he Spearman rank correlation coefficient of 0.52 indicates a moderate 
+    positive correlation between awareness of inflation and perception of 
+    inflation among job order workers. This means that as awareness scores increase, 
+    perception scores also tend to increase, but the relationship is not very strong.
+    \nThe p-value of 0.0000 suggests that this correlation is statistically 
+    significant.  In other words, it is very unlikely that this observed 
+    correlation is due to chance alone.
+    \nStrength: A coefficient of 0.52 falls within the range generally considered a 
+    "moderate" correlation. There's a noticeable, but not extremely strong, 
+    relationship between the two variables.
+    \nDirection: The positive sign indicates that higher awareness of inflation 
+    is associated with higher perception of its impact on financial well-being. 
+    In other words, as awareness scores go up, perception scores also tend to go up.
+    Significance: The p-value of 0.0000 is less than the typical significance level of 0.05. This means we can reject the null hypothesis that there's no correlation between awareness and perception. There's strong evidence to suggest a real association between these two factors in the data.
+    \nCorrelation doesn't imply causation. Just because awareness and perception 
+    are correlated doesn't necessarily mean that one causes the other. 
+    There might be other factors influencing both variables.
+    The strength of the correlation (moderate) suggests a trend, but there's also 
+    a significant amount of variation. Not everyone with higher awareness will 
+    have a higher perception of inflation's impact. The Spearman rank coefficient 
+    suggests a meaningful positive association between awareness of inflation 
+    and perception of its impact on financial well-being among job order workers at 
+    the state university. However, it's important to consider the limitations of 
+    correlation and explore the data further to understand the underlying relationship."""
 
 #run the app
 if __name__ == "__main__":
