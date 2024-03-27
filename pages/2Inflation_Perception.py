@@ -31,9 +31,7 @@ def app():
 
     st.subheader('Frequency counts')
 
-
-
-    #display_freqs(df, "Sex")
+    display_freqs(df, "Sex")
     display_freqs(df, "Age")
     display_freqs(df, "Civil Status")
     display_freqs(df, "Educ")
