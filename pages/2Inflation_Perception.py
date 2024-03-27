@@ -258,7 +258,8 @@ def display_freqs(df, column):
     st.write(scounts)
     #Ensure explode has the same length as scounts
     explode = [0 for _ in range(len(scounts))]  # Create list with 0s matching scounts length
-
+    explode[1] = 0.05
+    
     custom_colours = ['#ff7675', '#74b9ff']
     # Define labels and sizes for the pie chart
     sizes = scounts
