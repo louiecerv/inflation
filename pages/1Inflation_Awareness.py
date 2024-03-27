@@ -153,6 +153,20 @@ def display_freqs(df, column):
     plt.title('Frequency of ' + column)
     st.pyplot(fig)
 
+def plot_usage_by(df, column):
+    # Create the figure and axes object
+    fig, ax = plt.subplots(figsize=(6, 3))
+
+    # Create the countplot directly on the provided axes
+    sns.countplot(x=column, data=df, hue='Awareness', palette='bright', ax=ax)
+
+    # Set the title and adjust layout
+    ax.set_title("Awareness Grouped by " + column, fontsize=14)
+    plt.tight_layout()  # Prevent overlapping elements
+
+    # Display the plot
+    st.pyplot(fig)    
+
 #run the app
 if __name__ == "__main__":
     app()
