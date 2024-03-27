@@ -44,6 +44,7 @@ def app():
 
     # Print the results
     st.write("Spearman Rank Correlation Coefficient: {:.2f}".format(spearman_coeff))
+    st.write(p_value)
     st.write("p-value: {:.8f}".format(p_value))
 
 #run the app
