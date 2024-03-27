@@ -276,7 +276,7 @@ def display_freqs(df, column):
 
 def plot_usage_by(df, column):
     # Create the figure and axes object
-    fig, ax = plt.subplots(figsize=(6, 3))
+    fig, ax = plt.subplots(figsize=(6, 6))
 
     # Create the countplot directly on the provided axes
     p = sns.countplot(x=column, data=df, hue='awarenesslevel', palette='bright', ax=ax)
