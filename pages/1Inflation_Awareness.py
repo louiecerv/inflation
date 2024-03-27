@@ -176,6 +176,7 @@ def app():
     sample size or variability in the data might be too high to detect it 
     with this test."""
     st.write(text)
+    
     st.subheader('T-test on the Level of Awareness Grouped by Socio-economic Status')
     lower_awareness = df1[df1['SEStatus'] == 'Low Income Class (Between ?9,100 to ?18,200)']['Awareness']
     mid_awareness = df1[df1['SEStatus'] == 'Lower Middle Income Class (Between ?18,201 to ?36,400)']['Awareness']
