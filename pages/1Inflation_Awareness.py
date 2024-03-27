@@ -286,7 +286,7 @@ def display_freqs(df, column):
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
         .stContainer {
-        width: 400px; 
+        width: 200px; 
         margin: auto;
         }
     </style>
@@ -319,7 +319,7 @@ def plot_usage_by(df, column):
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
         .stContainer {
-        width: 300px; 
+        width: 200px; 
         margin: auto;
         }
     </style>
