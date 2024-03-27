@@ -149,7 +149,28 @@ def app():
     F_statistic, p_value = stats.f_oneway(g1, g2, g3)
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
-    st.write("p-value: {:.4f}".format(p_value))    
+    st.write("p-value: {:.4f}".format(p_value))   
+    text = """The results of the ANOVA test indicate that there is not 
+    statistically significant evidence to reject the null hypothesis. 
+    In simpler terms, this means we don't have enough evidence to conclude 
+    that there are differences in the level of perception of inflation between 
+    the three age groups.
+    \nF-statistic (0.39): This statistic compares the variance between the 
+    groups (variance explained by the independent variable, age) to the 
+    variance within the groups (unexplained variance). A low F-statistic, 
+    like the one here (0.39), suggests that the variance between the groups 
+    is relatively small compared to the variance within the groups.
+    \np-value (0.6765): This value represents the probability of observing a 
+    test statistic (F-statistic in this case) as extreme or more extreme than
+    what was obtained, assuming the null hypothesis is true. A high p-value 
+    (greater than 0.05 indicates that the observed F-statistic is not statistically 
+    unusual and could have easily occurred by chance, even if there were no
+    real differences between the groups. Based on this ANOVA test, we cannot 
+    say that there's a statistically significant difference in the level of 
+    perception of inflation between the three age groups. It's possible that there
+    might be some real differences, but the sample data we have is not strong 
+    enough to detect them definitively. """
+    st.write(text)
 
     st.subheader('ANOVA test on the Level of Perception Grouped by Educational Attainment')
     g1 = df1.loc[(df1['Educ'] =='Elementary Graduate'), 'Perception']
