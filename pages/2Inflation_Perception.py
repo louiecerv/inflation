@@ -99,7 +99,7 @@ def app():
     \nA statistically significant result (p-value < 0.05) suggests that the variable has a significant 
     effect on e-banking usage."""
     st.write(text)
-    
+
     st.subheader('Independent Sample T-Test')
     text = """The independent samples t-test, also called the two-sample t-test, 
     is a statistical tool used to compare the means of two independent groups. 
@@ -160,7 +160,23 @@ def app():
     F_statistic, p_value = stats.f_oneway(g1, g2, g3, g4)
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
-    st.write("p-value: {:.4f}".format(p_value))    
+    st.write("p-value: {:.4f}".format(p_value))
+    text = """The results of the ANOVA test indicate that there is no significant
+    difference in the level of perception of inflation between the four education
+    attainment groups.
+    \nF-statistic (0.39): This statistic measures the ratio of variances between 
+    groups compared to the variance within groups. A low F-statistic, like 0.39 
+    in this case, suggests that the variances between the groups are similar to 
+    the variances within the groups.
+    \np-value (0.7626): This value represents the probability of observing an 
+    F-statistic as extreme or more extreme than the one obtained, assuming the 
+    null hypothesis (no difference between groups) is true. A high p-value 
+    (greater than 0.05, which is a commonly used significance level) suggests that 
+    the observed F-statistic is likely due to chance, and we fail to reject the 
+    null hypothesis. Based on this ANOVA test, we can't conclude that there's a 
+    statistically significant difference in how job order workers from different 
+    education attainment groups perceive inflation."""
+    st.write(text) 
 
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
