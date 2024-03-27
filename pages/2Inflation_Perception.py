@@ -106,7 +106,7 @@ def app():
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)
 
-    st.subheader('T-test on the Level of Awareness Grouped by Civil Status')
+    st.subheader('T-test on the Level of Perception Grouped by Civil Status')
     single_awareness = df1[df1['Civil Status'] == 'Single']['Perception']
     married_awareness = df1[df1['Civil Status'] == 'Married']['Perception']
     # Perform the t-test
@@ -115,7 +115,7 @@ def app():
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)
 
-    st.subheader('T-test on the Level of Awareness Grouped by Socio-economic Status')
+    st.subheader('T-test on the Level of Perception Grouped by Socio-economic Status')
     lower_awareness = df1[df1['SEStatus'] == 'Low Income Class (Between ?9,100 to ?18,200)']['Perception']
     mid_awareness = df1[df1['SEStatus'] == 'Lower Middle Income Class (Between ?18,201 to ?36,400)']['Perception']
     # Perform the t-test
@@ -124,7 +124,7 @@ def app():
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)    
 
-    st.subheader('ANOVA test on the Level of Awareness Grouped by Age')
+    st.subheader('ANOVA test on the Level of Perception Grouped by Age')
     g1 = df1.loc[(df1['Age'] =='18-35 years old'), 'Perception']
     g2 = df1.loc[(df1['Age'] =='36-50 years old'), 'Perception']
     g3 = df1.loc[(df1['Age'] =='above 50 years old'), 'Perception']
@@ -134,7 +134,7 @@ def app():
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))    
 
-    st.subheader('ANOVA test on the Level of Awareness Grouped by Educational Attainment')
+    st.subheader('ANOVA test on the Level of Perception Grouped by Educational Attainment')
     g1 = df1.loc[(df1['Educ'] =='Elementary Graduate'), 'Perception']
     g2 = df1.loc[(df1['Educ'] =='High School Graduate'), 'Perception']
     g3 = df1.loc[(df1['Educ'] =='College Graduate'), 'Perception']
