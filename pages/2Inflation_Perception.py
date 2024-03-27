@@ -256,6 +256,9 @@ def display_freqs(df, column):
     scounts = df[column].value_counts()
     # Print the frequency table
     st.write(scounts)
+    #Ensure explode has the same length as scounts
+    explode = [0 for _ in range(len(scounts))]  # Create list with 0s matching scounts length
+
     custom_colours = ['#ff7675', '#74b9ff']
     # Define labels and sizes for the pie chart
     sizes = scounts
@@ -266,7 +269,7 @@ def display_freqs(df, column):
     # Create the pie chart
     wedges, texts, autotexts = ax1.pie(sizes, autopct='%1.0f%%',
                                     startangle=140, colors=custom_colours,
-                                    textprops={'fontsize': 10}, explode=[0, 0.05])
+                                    textprops={'fontsize': 10}, explode=explode)
     ax1.set_title('Distribution of ' + column)
 
     # Create the bar chart using seaborn
