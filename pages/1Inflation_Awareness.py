@@ -216,7 +216,7 @@ def app():
     we fail to reject the null hypothesis. The null hypothesis, in this case, is 
     that the means of the awareness level are equal between the age groups."""
     st.write(text)
-    
+
     st.subheader('ANOVA test on the Level of Awareness Grouped by Educational Attainment')
     g1 = df1.loc[(df1['Educ'] =='Elementary Graduate'), 'Awareness']
     g2 = df1.loc[(df1['Educ'] =='High School Graduate'), 'Awareness']
@@ -226,7 +226,22 @@ def app():
     F_statistic, p_value = stats.f_oneway(g1, g2, g3, g4)
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
-    st.write("p-value: {:.4f}".format(p_value))    
+    st.write("p-value: {:.4f}".format(p_value))
+    text = """The results of the ANOVA test suggest that there is not a 
+    statistically significant difference in the level of awareness between the four 
+    education attainment groups.
+    \nF-statistic (1.62): The F-statistic is used to compare the variances between 
+    groups (in this case, education attainment groups) to the variance within the 
+    groups.
+    \np-value (0.1889): This is the key value for interpreting the results. A p-value 
+    is the probability of observing a test statistic (like the F-statistic) as extreme 
+    as the one we calculated, assuming there is no real difference between the groups 
+    (the null hypothesis). In general, a smaller p-value indicates stronger evidence 
+    against the null hypothesis. Since the p-value (0.1889) is greater than the commonly
+    used significance level of 0.05, we fail to reject the null hypothesis. 
+    In other words, the data doesn't provide enough evidence to conclude that there 
+    is a statistically significant difference in the level of awareness among the 
+    four education attainment groups.""" 
 
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
