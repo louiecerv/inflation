@@ -193,7 +193,7 @@ def app():
     # Print the results
     st.write("F-statistic: {:.2f}".format(F_statistic))
     st.write("p-value: {:.4f}".format(p_value))   
-    
+
     text = """The results of the ANOVA test indicate that there is not 
     statistically significant evidence to reject the null hypothesis. 
     In simpler terms, this means we don't have enough evidence to conclude 
@@ -257,7 +257,10 @@ def display_freqs(df, column):
 
     # Print the frequency table
     st.write(col_counts)
-    
+
+    # Create a container
+    container = st.container()
+
     # Create the figure and axes objects    
     fig, ax = plt.subplots()  # Create a figure and a single axes
     # Create a bar chart of the frequency using seaborn
@@ -268,12 +271,27 @@ def display_freqs(df, column):
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)    
     plt.title('Frequency of ' + column)
-    plt.tight_layout()  # Prevent overlapping elements    
-    st.pyplot(fig)
+  
+    # Display the plot within the container
+    container.pyplot(fig)
+
+    # Add CSS to the container using st.write (adjust width as needed)
+    st.write("""
+    <style>
+        .plot-container {
+        width: 400px;  /* Adjust width here */
+        margin: auto;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 def plot_usage_by(df, column):
+
+    # Create a container
+    container = st.container()
+
     # Create the figure and axes object
-    fig, ax = plt.subplots(figsize=(6, 3))
+    fig, ax = plt.subplots()
 
     # Create the countplot directly on the provided axes
     p = sns.countplot(x=column, data=df, hue='perceptionlevel', palette='bright', ax=ax)
@@ -282,10 +300,19 @@ def plot_usage_by(df, column):
     ax.set_title("Perception Level Grouped by " + column, fontsize=14)
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)
-    plt.tight_layout()  # Prevent overlapping elements
 
-    # Display the plot
-    st.pyplot(fig)    
+    # Display the plot within the container
+    container.pyplot(fig)
+
+    # Add CSS to the container using st.write (adjust width as needed)
+    st.write("""
+    <style>
+        .plot-container {
+        width: 400px;  /* Adjust width here */
+        margin: auto;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 #run the app
 if __name__ == "__main__":
