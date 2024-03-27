@@ -69,6 +69,7 @@ def app():
     and perception of its impact on financial well-being among job order workers at 
     the state university. However, it's important to consider the limitations of 
     correlation and explore the data further to understand the underlying relationship."""
+    st.write(text)
 
 #run the app
 if __name__ == "__main__":
