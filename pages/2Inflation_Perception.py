@@ -131,7 +131,18 @@ def app():
     # Print the results
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)
-
+    text = """he results of the independent samples t-test indicate that there 
+    is no statistically significant difference between the levels of perception of 
+    inflation for single and married people. 
+    \nt-statistic (0.5268): This value doesn't tell us much by itself in this 
+    context. It's a test statistic used to compare the means of two groups, 
+    but without a critical value or p-value, we can't determine significance.
+    \np-value (0.5993): This is the key finding. A p-value greater than 0.05 
+    suggests that we fail to reject the null hypothesis. In this case, the null 
+    hypothesis is that the average perception of inflation is the same for 
+    single and married people."""
+    st.write(text)
+    
     st.subheader('T-test on the Level of Perception Grouped by Socio-economic Status')
     lower_awareness = df1[df1['SEStatus'] == 'Low Income Class (Between ?9,100 to ?18,200)']['Perception']
     mid_awareness = df1[df1['SEStatus'] == 'Lower Middle Income Class (Between ?18,201 to ?36,400)']['Perception']
@@ -140,6 +151,25 @@ def app():
     # Print the results
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)    
+    text = """The results of the independent sample t-test indicate that there is no 
+    statistically significant difference in the levels of perception of inflation 
+    between low-income and lower-middle-income individuals. 
+    \nT-statistic: 0.5692 - This value tells the direction and strength of the 
+    difference between the two groups' average perception of inflation. In this case, 
+    the t-statistic is very close to 0, indicating a negligible difference between 
+    the means.
+    \nP-value: 0.5704 - The p-value represents the probability of observing a 
+    t-statistic as extreme or more extreme than the one obtained, assuming the null 
+    hypothesis (no difference between the groups) is true. A high p-value (greater 
+    than 0.05) suggests that the observed difference is likely due to chance.
+    Since the p-value (0.5704) is greater than the commonly used significance level 
+    of alpha = 0.05, we fail to reject the null hypothesis. In other words, the 
+    t-test doesn't provide enough evidence to conclude that there's a statistically 
+    significant difference in how low-income and lower-middle-income people perceive 
+    inflation. The t-test suggests that there's no clear distinction between how 
+    low-income and lower-middle-income individuals view inflation. The small 
+    difference observed between the two groups could be due to random chance."""
+    st.write(text)
 
     st.subheader('ANOVA test on the Level of Perception Grouped by Age')
     g1 = df1.loc[(df1['Age'] =='18-35 years old'), 'Perception']
