@@ -129,6 +129,15 @@ def app():
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)
 
+    st.subheader('T-test on the Level of Awareness Grouped by Socio-economic Status')
+    lower_awareness = df1[df1['SEStatus'] == 'Low Income Class (Between ?9,100 to ?18,200)']['Awareness']
+    mid_awareness = df1[df1['SEStatus'] == 'Lower Middle Income Class (Between ?18,201 to ?36,400)']['Awareness']
+    # Perform the t-test
+    t_statistic, p_value = stats.ttest_ind(lower_awareness, mid_awareness)
+    # Print the results
+    st.write("t-statistic:", t_statistic)
+    st.write("p-value:", p_value)    
+
 
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
