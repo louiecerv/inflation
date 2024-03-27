@@ -4,6 +4,7 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.preprocessing import LabelEncoder
 from scipy.stats import chi2_contingency
 import scipy.stats as stats
 import time
