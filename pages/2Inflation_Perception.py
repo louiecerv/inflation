@@ -35,7 +35,7 @@ def app():
     scounts = df['Sex'].value_counts()
     # Print the frequency table
     st.write(scounts)
-
+    custom_colours = ['#ff7675', '#74b9ff']
     # Define labels and sizes for the pie chart
     labels = ['Female', 'Male']
     sizes = [scounts[0], scounts[1]]
