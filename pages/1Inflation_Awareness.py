@@ -16,7 +16,7 @@ def app():
         st.session_state.le_list = []
 
     st.subheader('Statistical Analysis on the Factors that Could Affect the Inflation Awareness')
-    text = """CBM Student E-Banking Usage Dataset
+    text = """Inflation Awareness Among Job Order Workers Dataset
     \nThis dataset investigates the factors that affect inflation awareness 
     among job order workers in a state university.
     \nFeatures:
@@ -28,7 +28,7 @@ def app():
     Awareness (ordinal): Awareness as measured by a Likert scale
     \nSampling Method:
     Stratified random sampling"""
-    with st.expander("About the Dataset. CLick to expand."):
+    with st.expander("About the Dataset. Click here to expand."):
         st.write(text)
 
     df = pd.read_csv('inflation-final.csv', header=0)
