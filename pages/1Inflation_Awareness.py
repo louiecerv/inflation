@@ -71,7 +71,7 @@ def app():
 
     st.write('Descriptive Statistics')
     st.write(df.describe().T)
-    st.write('The inflation awareness means and std of the sample')
+    st.write('The inflation awareness means and std of all respondents as an entire group')
     plot_usage_by(df, "awarenesslevel")
     st.write('The inflation awareness means and std when grouped according to Sex:')
     plot_usage_by(df, "Sex")
@@ -110,6 +110,25 @@ def app():
     \nA statistically significant result (p-value < 0.05) suggests that the variable has a significant 
     effect on e-banking usage."""
     st.write(text)
+
+    st.subheader('T-test on the Level of Awareness Grouped by Sex')
+    male_awareness = df1[df1['Sex'] == 'Male']['Awareness']
+    female_awareness = df1[df1['Sex'] == 'Female']['Awareness']
+    # Perform the t-test
+    t_statistic, p_value = stats.ttest_ind(male_awareness, female_awareness)
+    # Print the results
+    st.write("t-statistic:", t_statistic)
+    st.write("p-value:", p_value)
+
+    st.subheader('T-test on the Level of Awareness Grouped by Civil Status')
+    single_awareness = df1[df1['Civil Status'] == 'Single']['Awareness']
+    married_awareness = df1[df1['Civil Status'] == 'Married']['Awareness']
+    # Perform the t-test
+    t_statistic, p_value = stats.ttest_ind(single_awareness, married_awareness)
+    # Print the results
+    st.write("t-statistic:", t_statistic)
+    st.write("p-value:", p_value)
+
 
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
