@@ -45,7 +45,7 @@ def app():
     # Print the results
     st.write("Spearman Rank Correlation Coefficient: {:.2f}".format(spearman_coeff))
     st.write("p-value: {:.4f}".format(p_value))
-    text = """he Spearman rank correlation coefficient of 0.52 indicates a moderate 
+    text = """The Spearman rank correlation coefficient of 0.52 indicates a moderate 
     positive correlation between awareness of inflation and perception of 
     inflation among job order workers. This means that as awareness scores increase, 
     perception scores also tend to increase, but the relationship is not very strong.
