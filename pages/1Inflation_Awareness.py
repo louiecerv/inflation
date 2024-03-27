@@ -241,7 +241,8 @@ def app():
     used significance level of 0.05, we fail to reject the null hypothesis. 
     In other words, the data doesn't provide enough evidence to conclude that there 
     is a statistically significant difference in the level of awareness among the 
-    four education attainment groups.""" 
+    four education attainment groups."""
+    st.write(text)
 
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
