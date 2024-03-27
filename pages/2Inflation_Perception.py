@@ -31,33 +31,7 @@ def app():
 
     st.subheader('Frequency counts')
 
-    # Calculate counts for each sex
-    scounts = df['Sex'].value_counts()
-    # Print the frequency table
-    st.write(scounts)
-    custom_colours = ['#ff7675', '#74b9ff']
-    # Define labels and sizes for the pie chart
-    labels = ['Female', 'Male']
-    sizes = [scounts[0], scounts[1]]
 
-    # Create a figure and subplots
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
-
-    # Create the pie chart
-    wedges, texts, autotexts = ax1.pie(sizes, labels=labels, autopct='%1.0f%%',
-                                    startangle=140, colors=custom_colours,
-                                    textprops={'fontsize': 10}, explode=[0, 0.05])
-    ax1.set_title('Sex Distribution')
-
-    # Create the bar chart using seaborn
-    ax2 = sns.barplot(x=df['Sex'].unique(), y=df['Sex'].value_counts(), ax=ax2, palette='viridis')
-    ax2.set_xlabel('Sex')
-    ax2.set_ylabel('Frequency')
-    ax2.set_title('Sex Count')
-
-    # Tight layout to prevent overlapping elements
-    plt.tight_layout()
-    st.pyplot(fig)
 
     #display_freqs(df, "Sex")
     display_freqs(df, "Age")
@@ -280,38 +254,32 @@ def mean_std(df, column_name):
     st.write(results)
 
 def display_freqs(df, column):
-    # Get the frequency count of each class in the column
-    col_counts = df[column].value_counts()
-
+     # Calculate counts for each sex
+    scounts = df[column].value_counts()
     # Print the frequency table
-    st.write(col_counts)
+    st.write(scounts)
+    custom_colours = ['#ff7675', '#74b9ff']
+    # Define labels and sizes for the pie chart
+    sizes = [scounts[0], scounts[1]]
 
-    # Create a container
-    container = st.container()
+    # Create a figure and subplots
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
 
-    # Create the figure and axes objects    
-    fig, ax = plt.subplots()  # Create a figure and a single axes
-    # Create a bar chart of the frequency using seaborn
-    p = sns.barplot(x=col_counts.index, y=col_counts.values)
-    plt.xlabel(column)
-    plt.ylabel("Frequency")
+    # Create the pie chart
+    wedges, texts, autotexts = ax1.pie(sizes, labels=df[column], autopct='%1.0f%%',
+                                    startangle=140, colors=custom_colours,
+                                    textprops={'fontsize': 10}, explode=[0, 0.05])
+    ax1.set_title('Distribution of ' + column)
 
-    # Rotate x-axis labels for better readability
-    plt.setp(p.get_xticklabels(), rotation=90)    
-    plt.title('Frequency of ' + column)
-  
-    # Display the plot within the container
-    container.pyplot(fig)
+    # Create the bar chart using seaborn
+    ax2 = sns.barplot(x=df[column].unique(), y=df[column].value_counts(), ax=ax2, palette='viridis')
+    ax2.set_xlabel(column)
+    ax2.set_ylabel('Frequency')
+    ax2.set_title(column + ' Count')
 
-    # Add CSS to the container using st.write (adjust width as needed)
-    st.write("""
-    <style>
-        .plot-container {
-        width: 400px;  /* Adjust width here */
-        margin: auto;
-        }
-    </style>
-    """, unsafe_allow_html=True)
+    # Tight layout to prevent overlapping elements
+    plt.tight_layout()
+    st.pyplot(fig)
 
 def plot_usage_by(df, column):
 
