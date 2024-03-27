@@ -13,8 +13,11 @@ import time
 def app():
 
     st.subheader('Statistical Analysis on the Factors that Could Affect the Inflation Perception')
-    text = """Describe the inflation perception in the paper..."""
-    with st.expander("About the Dataset. CLick to expand."):
+    text = """This part of the data app sought to answer this research question:
+    Are there significant differences in the level of perception of inflation 
+    among job order workers in a state university when classified according to age, 
+    sex, civil status, educational attainment, and socioeconomic status?"""
+    with st.expander("About the research question. CLick to expand."):
         st.write(text)
 
     df = pd.read_csv('inflation-final.csv', header=0)
@@ -97,6 +100,19 @@ def app():
     effect on e-banking usage."""
     st.write(text)
 
+    text = """The independent samples t-test, also called the two-sample t-test, 
+    is a statistical tool used to compare the means of two independent groups. 
+    It helps you assess if there's a significant difference in the average values 
+    between two unrelated groups.
+    \nPurpose: It determines if there's a statistically significant difference between
+    the means of two independent groups on a continuous variable.
+    \nOutputs: The test provides a t-statistic and a p-value. The p-value tells you 
+    how likely it is to observe such a difference by chance, assuming the null hypothesis (no difference between means) is true. A low p-value (typically below 0.05) indicates a statistically significant difference.
+    By interpreting the p-value, you can conclude whether the observed difference in 
+    means between the two groups is likely due to random chance or reflects a true 
+    difference in the populations they represent."""
+    st.write(text)
+    
     st.subheader('T-test on the Level of Awareness Grouped by Sex')
     male_awareness = df1[df1['Sex'] == 'Male']['Perception']
     female_awareness = df1[df1['Sex'] == 'Female']['Perception']
