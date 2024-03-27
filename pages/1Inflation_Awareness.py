@@ -129,9 +129,10 @@ def display_freqs(df, column):
     # Create the figure and axes objects    
     fig, ax = plt.subplots()  # Create a figure and a single axes
     # Create a bar chart of the frequency using seaborn
-    sns.barplot(x=col_counts.index, y=col_counts.values)
+    p = sns.barplot(x=col_counts.index, y=col_counts.values)
     plt.xlabel(column)
     plt.ylabel("Frequency")
+
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)    
     plt.title('Frequency of ' + column)
