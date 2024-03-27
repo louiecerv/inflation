@@ -9,7 +9,7 @@ def app():
 
     text = """An udergraduate thesis at the College of Business and Management:"""
     st.write(text)  
-    st.markdown("Balajadia, Arianne V., Comorro, Kyle Avefern B., Daria, Niña Paula C., Erazo, Josephine Aurea E., and Granada, Shaneen Joy A. *Awareness and Perception on Inflation Among Job Order Workers in a State University* Unpublished undergraduate thesis. (2024)")
+    st.markdown("Balajadia, Arianne V., Comorro, Kyle Avefern B., Daria, Niña Paula C., Erazo, Josephine Aurea E., and Granada, Shaneen Joy A. *Awareness and Perception on Inflation Among Job Order Workers in a State University*. Unpublished undergraduate thesis. (2024)")
 
     st.image('inflation.png', caption="Inflation Awareness and Perception")
 
