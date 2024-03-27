@@ -122,6 +122,15 @@ def app():
     # Print the results
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)
+    text = """The results of the independent sample t-test indicate that 
+    there is no statistically significant difference in the levels of 
+    perception of inflation between males and females. This is because 
+    the p-value (0.2276) is greater than the significance level set at 0.05. 
+    The data does not provide enough evidence to conclude that males and 
+    females have different perceptions of inflation. It is possible that 
+    there is a difference, but this study could not detect it with 
+    enough certainty."""
+    st.write(text)
 
     st.subheader('T-test on the Level of Perception Grouped by Civil Status')
     single_awareness = df1[df1['Civil Status'] == 'Single']['Perception']
@@ -142,7 +151,7 @@ def app():
     hypothesis is that the average perception of inflation is the same for 
     single and married people."""
     st.write(text)
-    
+
     st.subheader('T-test on the Level of Perception Grouped by Socio-economic Status')
     lower_awareness = df1[df1['SEStatus'] == 'Low Income Class (Between ?9,100 to ?18,200)']['Perception']
     mid_awareness = df1[df1['SEStatus'] == 'Lower Middle Income Class (Between ?18,201 to ?36,400)']['Perception']
