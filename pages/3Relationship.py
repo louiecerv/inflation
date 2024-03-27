@@ -43,8 +43,8 @@ def app():
     spearman_coeff, p_value = spearmanr(awareness_levels, perception_levels)
 
     # Print the results
-    st.write("Spearman Rank Correlation Coefficient:", spearman_coeff)
-    st.write("p-value:", p_value)
+    st.write("Spearman Rank Correlation Coefficient: {:.2f}".format(spearman_coeff))
+    st.write("p-value: {:.4f}".format(p_value))
 
 #run the app
 if __name__ == "__main__":
