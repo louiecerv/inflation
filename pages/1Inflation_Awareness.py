@@ -309,7 +309,6 @@ def plot_usage_by(df, column):
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)
 
-    # Display the plot
     # Display the plot within the container
     container.pyplot(fig)
 
