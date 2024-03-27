@@ -184,6 +184,7 @@ def display_freqs(df, column):
     # Rotate x-axis labels for better readability
     plt.setp(p.get_xticklabels(), rotation=90)    
     plt.title('Frequency of ' + column)
+    plt.tight_layout()  # Prevent overlapping elements    
     st.pyplot(fig)
 
 def plot_usage_by(df, column):
