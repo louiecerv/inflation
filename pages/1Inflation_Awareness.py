@@ -138,6 +138,26 @@ def app():
     st.write("t-statistic:", t_statistic)
     st.write("p-value:", p_value)    
 
+    st.subheader('ANOVA test on the Level of Awareness Grouped by Age')
+    g1 = df1.loc[(df1['Age'] =='18-35 years old'), 'Awareness']
+    g2 = df1.loc[(df1['Age'] =='36-50 years old'), 'Awareness']
+    g3 = df1.loc[(df1['Age'] =='above 50 years old'), 'Awareness']
+    # Perform one-way ANOVA test
+    F_statistic, p_value = stats.f_oneway(g1, g2, g3)
+    # Print the results
+    st.write("F-statistic: {:.2f}".format(F_statistic))
+    st.write("p-value: {:.4f}".format(p_value))    
+
+    st.subheader('ANOVA test on the Level of Awareness Grouped by Educational Attainment')
+    g1 = df1.loc[(df1['Educ'] =='Elementary Graduate'), 'Awareness']
+    g2 = df1.loc[(df1['Educ'] =='High School Graduate'), 'Awareness']
+    g3 = df1.loc[(df1['Educ'] =='College Graduate'), 'Awareness']
+    g4 = df1.loc[(df1['Educ'] =="Master's Graduate"), 'Awareness']
+    # Perform one-way ANOVA test
+    F_statistic, p_value = stats.f_oneway(g1, g2, g3, g4)
+    # Print the results
+    st.write("F-statistic: {:.2f}".format(F_statistic))
+    st.write("p-value: {:.4f}".format(p_value))    
 
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
