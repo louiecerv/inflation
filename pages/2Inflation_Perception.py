@@ -99,7 +99,8 @@ def app():
     \nA statistically significant result (p-value < 0.05) suggests that the variable has a significant 
     effect on e-banking usage."""
     st.write(text)
-
+    
+    st.subheader('Independent Sample T-Test')
     text = """The independent samples t-test, also called the two-sample t-test, 
     is a statistical tool used to compare the means of two independent groups. 
     It helps you assess if there's a significant difference in the average values 
@@ -112,8 +113,8 @@ def app():
     means between the two groups is likely due to random chance or reflects a true 
     difference in the populations they represent."""
     st.write(text)
-    
-    st.subheader('T-test on the Level of Awareness Grouped by Sex')
+ 
+    st.subheader('T-test on the Level of Perception Grouped by Sex')
     male_awareness = df1[df1['Sex'] == 'Male']['Perception']
     female_awareness = df1[df1['Sex'] == 'Female']['Perception']
     # Perform the t-test
