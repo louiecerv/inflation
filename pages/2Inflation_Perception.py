@@ -8,6 +8,9 @@ from sklearn.preprocessing import LabelEncoder
 from scipy.stats import chi2_contingency
 import scipy.stats as stats
 import time
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
+
 
 # Define the Streamlit app
 def app():
@@ -215,6 +218,15 @@ def app():
     might be some real differences, but the sample data we have is not strong 
     enough to detect them definitively. """
     st.write(text)
+        # Fit the ANOVA model
+    model = ols('Perception ~ C(Age)', data=df).fit()
+    # Perform ANOVA    
+    anova_table = sm.stats.anova_lm(model, typ=2)
+    # Display ANOVA table
+
+    # Print the ANOVA table
+    st.write)"ANOVA Table - Source of variation: Age"
+    st.write(anova_table)
 
     st.subheader('ANOVA test on the Level of Perception Grouped by Educational Attainment')
     g1 = df1.loc[(df1['Educ'] =='Elementary Graduate'), 'Perception']
@@ -242,6 +254,16 @@ def app():
     statistically significant difference in how job order workers from different 
     education attainment groups perceive inflation."""
     st.write(text) 
+
+    # Fit the ANOVA model
+    model = ols('Perception ~ C(Educ)', data=df).fit()
+    # Perform ANOVA    
+    anova_table = sm.stats.anova_lm(model, typ=2)
+    # Display ANOVA table
+
+    # Print the ANOVA table
+    st.write)"ANOVA Table - Source of variation: Educational Attainment"
+    st.write(anova_table)
 
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
