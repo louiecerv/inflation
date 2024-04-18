@@ -223,10 +223,12 @@ def app():
 
     # Fit the ANOVA model
     model = ols('Awareness ~ C(Age)', data=df).fit()
-    # Perform ANOVA
+    # Perform ANOVA    
     anova_table = sm.stats.anova_lm(model, typ=2)
     # Display ANOVA table
-    st.write('ANOVA Table: Grouped by Age')
+
+    # Print the ANOVA table
+    st.write("ANOVA Table - Source of variation: Age")
     st.write(anova_table)
 
     st.subheader('ANOVA test on the Level of Awareness Grouped by Educational Attainment')
@@ -256,6 +258,16 @@ def app():
     is a statistically significant difference in the level of awareness among the 
     four education attainment groups."""
     st.write(text)
+
+    # Fit the ANOVA model
+    model = ols('Awareness ~ C(Educ)', data=df).fit()
+    # Perform ANOVA    
+    anova_table = sm.stats.anova_lm(model, typ=2)
+    # Display ANOVA table
+
+    # Print the ANOVA table
+    st.write("ANOVA Table - Source of variation: Educational Attainment")
+    st.write(anova_table)    
 
 def mean_std(df, column_name):
     grouped_data = df.groupby(column_name)
