@@ -225,7 +225,7 @@ def app():
     # Display ANOVA table
 
     # Print the ANOVA table
-    st.write)"ANOVA Table - Source of variation: Age"
+    st.write("ANOVA Table - Source of variation: Age")
     st.write(anova_table)
 
     st.subheader('ANOVA test on the Level of Perception Grouped by Educational Attainment')
@@ -262,7 +262,7 @@ def app():
     # Display ANOVA table
 
     # Print the ANOVA table
-    st.write)"ANOVA Table - Source of variation: Educational Attainment"
+    st.write("ANOVA Table - Source of variation: Educational Attainment")
     st.write(anova_table)
 
 def mean_std(df, column_name):
