@@ -8,6 +8,8 @@ from sklearn.preprocessing import LabelEncoder
 from scipy.stats import chi2_contingency
 import scipy.stats as stats
 import time
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
 
 # Define the Streamlit app
 def app():
@@ -107,6 +109,7 @@ def app():
     \nA statistically significant result (p-value < 0.05) suggests that the variable has a significant 
     effect on e-banking usage."""
     st.write(text)
+
 
     st.subheader('Independent Sample T-Test')
     text = """The independent samples t-test, also called the two-sample t-test, 
@@ -217,6 +220,14 @@ def app():
     we fail to reject the null hypothesis. The null hypothesis, in this case, is 
     that the means of the awareness level are equal between the age groups."""
     st.write(text)
+
+    # Fit the ANOVA model
+    model = ols('Awareness ~ C(Age)', data=df).fit()
+    # Perform ANOVA
+    anova_table = sm.stats.anova_lm(model, typ=2)
+    # Display ANOVA table
+    st.write('ANOVA Table: Grouped by Age')
+    st.write(anova_table)
 
     st.subheader('ANOVA test on the Level of Awareness Grouped by Educational Attainment')
     g1 = df1.loc[(df1['Educ'] =='Elementary Graduate'), 'Awareness']
